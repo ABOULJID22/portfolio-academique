@@ -66,6 +66,8 @@ Dans GitHub, aller dans :
 
 `Settings` -> `Pages` -> `Build and deployment` -> `Source` -> `GitHub Actions`
 
+Cette etape doit etre faite une seule fois par un compte qui a les droits admin/maintainer sur le depot.
+
 9. Pousser les changements.
 
 ```bash
@@ -75,6 +77,28 @@ git push
 ```
 
 Apres le push, GitHub Actions lance automatiquement le deploiement.
+
+## Etat du premier deploiement
+
+Le build local a reussi avec :
+
+```bash
+npm run build
+```
+
+Le workflow GitHub Actions a aussi demarre apres le push, et les etapes `Install dependencies` et `Build` ont reussi. Le premier run a echoue a l'etape `Setup Pages`, car GitHub Pages n'etait pas encore active sur le depot.
+
+Run GitHub Actions :
+
+https://github.com/ABOULJID22/portfolio-academique/actions/runs/27508319927
+
+Pour terminer :
+
+1. Ouvrir `Settings` -> `Pages`.
+2. Choisir `Source` -> `GitHub Actions`.
+3. Retourner dans `Actions`.
+4. Ouvrir le workflow `Deploy to GitHub Pages`.
+5. Cliquer sur `Re-run failed jobs` ou relancer `Run workflow`.
 
 ## Commandes de verification locale
 

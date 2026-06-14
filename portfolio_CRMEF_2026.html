@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Numérique – Professeur d'Informatique | CRMEF Marrakech</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  :root {
+    --primary: #1a3c6e;
+    --primary-light: #2563eb;
+    --accent: #0ea5e9;
+    --accent2: #06b6d4;
+    --gold: #f59e0b;
+    --dark: #0f172a;
+    --text: #334155;
+    --text-light: #64748b;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --card-bg: #ffffff;
+    --border: #e2e8f0;
+    --gradient1: linear-gradient(135deg, #1a3c6e 0%, #2563eb 50%, #0ea5e9 100%);
+    --gradient2: linear-gradient(135deg, #0f172a 0%, #1a3c6e 100%);
+    --shadow-sm: 0 2px 8px rgba(26,60,110,0.08);
+    --shadow-md: 0 8px 32px rgba(26,60,110,0.14);
+    --shadow-lg: 0 20px 60px rgba(26,60,110,0.18);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); }
+
+  /* ===== SCROLLBAR ===== */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 3px; }
+
+  /* ===== NAVBAR ===== */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(15,23,42,0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 0 5%;
+    height: 68px;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: all 0.3s;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 12px;
+    text-decoration: none;
+  }
+  .nav-logo-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: var(--gradient1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; color: white;
+    font-weight: 800;
+  }
+  .nav-logo-text {
+    font-size: 15px; font-weight: 700;
+    color: white; line-height: 1.3;
+  }
+  .nav-logo-sub { font-size: 11px; font-weight: 400; color: var(--accent); }
+  .nav-links {
+    display: flex; align-items: center; gap: 6px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 13px; font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.2s;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .nav-links a:hover, .nav-links a.active {
+    background: rgba(255,255,255,0.1);
+    color: white;
+  }
+  .nav-links a i { font-size: 12px; }
+  .nav-cta {
+    background: var(--gradient1) !important;
+    color: white !important;
+    padding: 8px 18px !important;
+  }
+  .hamburger {
+    display: none; flex-direction: column; gap: 5px;
+    cursor: pointer; background: none; border: none; padding: 4px;
+  }
+  .hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: white; border-radius: 2px; transition: 0.3s;
+  }
+
+  /* ===== HERO SECTION ===== */
+  #accueil {
+    min-height: 100vh;
+    background: var(--gradient2);
+    display: flex; align-items: center;
+    position: relative; overflow: hidden;
+    padding-top: 68px;
+  }
+  .hero-bg-shapes {
+    position: absolute; inset: 0; pointer-events: none;
+  }
+  .hero-bg-shapes .shape {
+    position: absolute; border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+  .shape-1 { width: 600px; height: 600px; top: -200px; right: -100px; }
+  .shape-2 { width: 400px; height: 400px; bottom: -100px; left: -100px; }
+  .shape-3 { width: 200px; height: 200px; top: 40%; left: 30%; background: rgba(14,165,233,0.06); }
+
+  .hero-grid-bg {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-content {
+    max-width: 1280px; margin: 0 auto; padding: 80px 5%;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    align-items: center; position: relative; z-index: 2;
+    width: 100%;
+  }
+  .hero-left { }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(14,165,233,0.15);
+    border: 1px solid rgba(14,165,233,0.3);
+    color: var(--accent);
+    padding: 8px 16px; border-radius: 50px;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.5px; text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .hero-badge i { font-size: 10px; }
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 800;
+    color: white; line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .hero-name span {
+    background: linear-gradient(135deg, var(--accent), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-title {
+    font-size: 18px; font-weight: 500;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-title::before {
+    content: ''; width: 30px; height: 2px;
+    background: var(--accent); display: block;
+  }
+  .hero-desc {
+    font-size: 15px; line-height: 1.8;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 36px; max-width: 480px;
+  }
+  .hero-stats {
+    display: flex; gap: 36px; margin-bottom: 40px;
+  }
+  .hero-stat-item { text-align: center; }
+  .hero-stat-num {
+    font-size: 32px; font-weight: 800;
+    background: linear-gradient(135deg, var(--accent), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 11px; font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase; letter-spacing: 0.5px;
+    margin-top: 4px;
+  }
+  .hero-actions {
+    display: flex; gap: 14px; flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gradient1);
+    color: white; font-weight: 600; font-size: 14px;
+    padding: 14px 28px; border-radius: 50px;
+    text-decoration: none; border: none; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(37,99,235,0.4);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,99,235,0.5); }
+  .btn-outline {
+    background: transparent;
+    color: white; font-weight: 600; font-size: 14px;
+    padding: 14px 28px; border-radius: 50px;
+    text-decoration: none;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    display: inline-flex; align-items: center; gap: 8px;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.05); }
+
+  /* Hero Right – Profile Card */
+  .hero-right { display: flex; justify-content: center; }
+  .profile-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 24px;
+    padding: 40px 32px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    max-width: 320px; width: 100%;
+    position: relative;
+  }
+  .profile-avatar-wrap {
+    position: relative; display: inline-block; margin-bottom: 20px;
+  }
+  .profile-avatar {
+    width: 130px; height: 130px; border-radius: 50%;
+    background: var(--gradient1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 50px; color: white; font-weight: 800;
+    margin: 0 auto;
+    border: 4px solid rgba(255,255,255,0.15);
+  }
+  .profile-avatar-ring {
+    position: absolute; inset: -8px; border-radius: 50%;
+    border: 2px dashed rgba(14,165,233,0.4);
+    animation: spin 12s linear infinite;
+  }
+  .profile-status {
+    position: absolute; bottom: 6px; right: 6px;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: #22c55e;
+    border: 3px solid rgba(15,23,42,0.9);
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .profile-name-card {
+    font-size: 18px; font-weight: 700; color: white; margin-bottom: 6px;
+  }
+  .profile-role-card {
+    font-size: 12px; color: var(--accent); font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;
+  }
+  .profile-tags {
+    display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 20px;
+  }
+  .tag {
+    background: rgba(14,165,233,0.15); border: 1px solid rgba(14,165,233,0.2);
+    color: var(--accent); font-size: 11px; font-weight: 600;
+    padding: 4px 12px; border-radius: 50px;
+  }
+  .profile-info-list { text-align: left; }
+  .profile-info-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 12px; color: rgba(255,255,255,0.65);
+  }
+  .profile-info-item:last-child { border-bottom: none; }
+  .profile-info-item i { color: var(--accent); font-size: 13px; width: 16px; }
+
+  /* ===== SECTION COMMON ===== */
+  section { padding: 90px 0; }
+  .container { max-width: 1280px; margin: 0 auto; padding: 0 5%; }
+  .section-header { text-align: center; margin-bottom: 64px; }
+  .section-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--primary-light); font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 1.5px;
+    margin-bottom: 14px;
+  }
+  .section-badge::before, .section-badge::after {
+    content: ''; width: 30px; height: 1.5px;
+    background: var(--primary-light); display: block;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800; color: var(--dark);
+    line-height: 1.2; margin-bottom: 16px;
+  }
+  .section-desc {
+    font-size: 16px; color: var(--text-light);
+    max-width: 600px; margin: 0 auto; line-height: 1.7;
+  }
+
+  /* ===== À PROPOS ===== */
+  #apropos { background: white; }
+  .about-grid {
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start;
+  }
+  .about-content {}
+  .about-intro {
+    font-size: 17px; line-height: 1.85; color: var(--text);
+    margin-bottom: 32px;
+  }
+  .about-highlight {
+    background: linear-gradient(135deg, #eff6ff, #e0f2fe);
+    border-left: 4px solid var(--primary-light);
+    padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin-bottom: 32px;
+    font-size: 15px; font-style: italic; color: var(--primary);
+    line-height: 1.7;
+  }
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
+  .skill-item {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--bg); border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-size: 13px; font-weight: 500; color: var(--text);
+    transition: all 0.2s;
+  }
+  .skill-item:hover { background: #eff6ff; color: var(--primary-light); }
+  .skill-item i { color: var(--primary-light); font-size: 14px; width: 18px; }
+  .about-aside {}
+  .info-card {
+    background: var(--bg); border-radius: var(--radius); padding: 28px;
+    margin-bottom: 20px; border: 1px solid var(--border);
+  }
+  .info-card-title {
+    font-size: 13px; font-weight: 700; color: var(--primary);
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
+  }
+  .info-card-title i { color: var(--accent); }
+  .info-row {
+    display: flex; gap: 10px; margin-bottom: 12px; align-items: flex-start;
+  }
+  .info-row:last-child { margin-bottom: 0; }
+  .info-row i { color: var(--text-light); font-size: 13px; margin-top: 3px; flex-shrink: 0; }
+  .info-row-content { font-size: 13px; color: var(--text); line-height: 1.5; }
+  .info-row-label { font-weight: 600; color: var(--dark); }
+  .timeline {}
+  .timeline-item {
+    display: flex; gap: 16px; margin-bottom: 20px; align-items: flex-start;
+  }
+  .timeline-dot {
+    width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+    background: var(--gradient1);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 13px;
+  }
+  .timeline-body {}
+  .timeline-year {
+    font-size: 11px; font-weight: 700; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .timeline-title-t { font-size: 14px; font-weight: 700; color: var(--dark); }
+  .timeline-sub { font-size: 12px; color: var(--text-light); }
+
+  /* ===== MSP ===== */
+  #msp { background: var(--bg); }
+  .msp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 40px; }
+  .msp-card {
+    background: white; border-radius: var(--radius);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: all 0.3s;
+    box-shadow: var(--shadow-sm);
+  }
+  .msp-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+  .msp-card-header {
+    padding: 28px 28px 20px;
+    background: var(--gradient1);
+    position: relative; overflow: hidden;
+  }
+  .msp-card-header::after {
+    content: '';
+    position: absolute; right: -20px; top: -20px;
+    width: 100px; height: 100px; border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+  }
+  .msp-badge {
+    display: inline-block; background: rgba(255,255,255,0.2);
+    color: white; font-size: 10px; font-weight: 700;
+    padding: 4px 10px; border-radius: 50px;
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .msp-card-title {
+    font-size: 17px; font-weight: 700; color: white; margin-bottom: 4px;
+  }
+  .msp-card-sub { font-size: 12px; color: rgba(255,255,255,0.75); }
+  .msp-card-body { padding: 24px 28px; }
+  .msp-meta { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+  .msp-meta-item {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px; color: var(--text);
+  }
+  .msp-meta-item i { color: var(--primary-light); font-size: 13px; width: 16px; }
+  .resource-list { display: flex; flex-direction: column; gap: 8px; }
+  .resource-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 14px; border-radius: var(--radius-sm);
+    text-decoration: none; transition: all 0.2s;
+    font-size: 13px; font-weight: 500; color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .resource-item:hover { border-color: var(--primary-light); color: var(--primary-light); background: #eff6ff; }
+  .resource-item i { font-size: 16px; }
+  .res-pdf i { color: #ef4444; }
+  .res-img i { color: #8b5cf6; }
+  .res-link i { color: #3b82f6; }
+  .res-word i { color: #2563eb; }
+  .msp-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px;
+  }
+  .msp-stat {
+    background: white; border-radius: var(--radius); padding: 24px;
+    text-align: center; border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+  }
+  .msp-stat-icon {
+    width: 48px; height: 48px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; margin: 0 auto 12px;
+  }
+  .msp-stat-num {
+    font-size: 26px; font-weight: 800; color: var(--dark); margin-bottom: 4px;
+  }
+  .msp-stat-label { font-size: 12px; color: var(--text-light); font-weight: 500; }
+
+  /* ===== CRMEF ===== */
+  #crmef { background: white; }
+  .sem-tabs {
+    display: flex; gap: 0; margin-bottom: 40px;
+    background: var(--bg); border-radius: 12px; padding: 4px;
+    border: 1px solid var(--border); overflow-x: auto;
+  }
+  .sem-tab {
+    flex: 1; min-width: 160px;
+    padding: 14px 20px; border-radius: 10px;
+    border: none; background: none; cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px; font-weight: 600; color: var(--text-light);
+    transition: all 0.2s;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .sem-tab.active {
+    background: var(--gradient1); color: white;
+    box-shadow: 0 4px 16px rgba(37,99,235,0.3);
+  }
+  .sem-content { display: none; }
+  .sem-content.active { display: block; }
+  .modules-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;
+  }
+  .module-card {
+    background: var(--bg); border-radius: var(--radius);
+    border: 1px solid var(--border);
+    overflow: hidden; transition: all 0.3s;
+  }
+  .module-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--primary-light); }
+  .module-card-top {
+    padding: 20px 20px 16px;
+    display: flex; align-items: flex-start; gap: 14px;
+  }
+  .module-icon {
+    width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 18px;
+  }
+  .module-info {}
+  .module-num { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px; }
+  .module-title { font-size: 14px; font-weight: 700; color: var(--dark); line-height: 1.4; }
+  .module-divider { height: 1px; background: var(--border); margin: 0 20px; }
+  .module-resources { padding: 14px 20px; display: flex; flex-direction: column; gap: 7px; }
+  .mod-res-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 12px; border-radius: 8px;
+    text-decoration: none; font-size: 12px; font-weight: 500; color: var(--text);
+    background: white; border: 1px solid var(--border);
+    transition: all 0.2s;
+  }
+  .mod-res-item:hover { border-color: var(--primary-light); color: var(--primary-light); }
+  .mod-res-item i { font-size: 14px; }
+  .upload-placeholder {
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 8px;
+    padding: 20px; background: white;
+    border: 2px dashed var(--border); border-radius: var(--radius-sm);
+    color: var(--text-light); font-size: 12px; cursor: pointer;
+    transition: all 0.2s; text-align: center;
+    text-decoration: none;
+  }
+  .upload-placeholder:hover { border-color: var(--primary-light); color: var(--primary-light); background: #eff6ff; }
+  .upload-placeholder i { font-size: 24px; }
+
+  /* ===== LIENS IMPORTANTS ===== */
+  #liens { background: var(--bg); }
+  .liens-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+  .lien-card {
+    background: white; border-radius: var(--radius);
+    padding: 28px; border: 1px solid var(--border);
+    transition: all 0.3s; text-decoration: none;
+    display: block; box-shadow: var(--shadow-sm);
+    position: relative; overflow: hidden;
+  }
+  .lien-card::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: var(--gradient1);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .lien-card:hover::before { transform: scaleX(1); }
+  .lien-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .lien-icon {
+    width: 52px; height: 52px; border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; margin-bottom: 16px;
+  }
+  .lien-title { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+  .lien-desc { font-size: 13px; color: var(--text-light); line-height: 1.6; margin-bottom: 14px; }
+  .lien-url {
+    font-size: 11px; color: var(--primary-light);
+    font-weight: 600; display: flex; align-items: center; gap: 6px;
+  }
+
+  /* ===== CONTACT STRIP ===== */
+  .contact-strip {
+    background: var(--gradient2);
+    padding: 60px 0; text-align: center;
+  }
+  .contact-strip h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; font-weight: 800; color: white; margin-bottom: 16px;
+  }
+  .contact-strip p {
+    font-size: 16px; color: rgba(255,255,255,0.65); margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto;
+  }
+  .social-links { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .social-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: 50px;
+    text-decoration: none; font-size: 13px; font-weight: 600;
+    transition: all 0.3s;
+  }
+  .social-btn:hover { transform: translateY(-2px); }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--dark); padding: 24px 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+  }
+  footer p { font-size: 13px; color: rgba(255,255,255,0.4); }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { font-size: 12px; color: rgba(255,255,255,0.35); text-decoration: none; }
+  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+  /* ===== BACK TO TOP ===== */
+  .back-top {
+    position: fixed; bottom: 24px; right: 24px; z-index: 999;
+    width: 44px; height: 44px; border-radius: 12px;
+    background: var(--gradient1); color: white; border: none;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; font-size: 16px;
+    box-shadow: 0 4px 20px rgba(37,99,235,0.4);
+    transition: all 0.3s; text-decoration: none;
+    opacity: 0; pointer-events: none;
+  }
+  .back-top.visible { opacity: 1; pointer-events: all; }
+  .back-top:hover { transform: translateY(-4px); }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 900px) {
+    .hero-content { grid-template-columns: 1fr; gap: 40px; }
+    .hero-right { display: none; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .msp-grid { grid-template-columns: 1fr; }
+    .msp-stats { grid-template-columns: repeat(2, 1fr); }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    footer { flex-direction: column; text-align: center; }
+  }
+  @media (max-width: 600px) {
+    section { padding: 60px 0; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .hero-stats { gap: 20px; }
+    .msp-stats { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#accueil" class="nav-logo">
+    <div class="nav-logo-icon">M</div>
+    <div>
+      <div class="nav-logo-text">Portfolio Numérique</div>
+      <div class="nav-logo-sub">CRMEF Marrakech – Informatique</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#accueil" class="active"><i class="fas fa-home"></i> Accueil</a></li>
+    <li><a href="#apropos"><i class="fas fa-user"></i> À Propos</a></li>
+    <li><a href="#msp"><i class="fas fa-chalkboard-teacher"></i> MSP</a></li>
+    <li><a href="#crmef"><i class="fas fa-graduation-cap"></i> CRMEF</a></li>
+    <li><a href="#liens" class="nav-cta"><i class="fas fa-link"></i> Liens</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============ HERO / ACCUEIL ============ -->
+<section id="accueil">
+  <div class="hero-bg-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+  <div class="hero-grid-bg"></div>
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge">
+        <i class="fas fa-star"></i>
+        CRMEF Marrakech-Safi · 2025–2026
+      </div>
+      <h1 class="hero-name">
+        [Votre Nom]<br>
+        <span>Professeur d'Informatique</span>
+      </h1>
+      <p class="hero-title">Stagiaire CRMEF · Collège · Marrakech</p>
+      <p class="hero-desc">
+        Portfolio numérique académique regroupant mes cours, ressources pédagogiques,
+        rapports de stage MSP, et mes réalisations au sein du CRMEF – Marrakech Safi.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">2</div>
+          <div class="hero-stat-label">Semestres</div>
+        </div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">8+</div>
+          <div class="hero-stat-label">Modules</div>
+        </div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">MSP</div>
+          <div class="hero-stat-label">Stages</div>
+        </div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">PFE</div>
+          <div class="hero-stat-label">Projet Final</div>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#crmef" class="btn-primary"><i class="fas fa-folder-open"></i> Voir mes Cours</a>
+        <a href="#msp" class="btn-outline"><i class="fas fa-chalkboard-teacher"></i> Mes Stages MSP</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="profile-card">
+        <div class="profile-avatar-wrap">
+          <div class="profile-avatar">👨‍🏫</div>
+          <div class="profile-avatar-ring"></div>
+          <div class="profile-status"></div>
+        </div>
+        <div class="profile-name-card">[Votre Nom Complet]</div>
+        <div class="profile-role-card">Professeur Stagiaire · Informatique</div>
+        <div class="profile-tags">
+          <span class="tag">Algorithmique</span>
+          <span class="tag">Python</span>
+          <span class="tag">Multimédia</span>
+          <span class="tag">Didactique</span>
+        </div>
+        <div class="profile-info-list">
+          <div class="profile-info-item">
+            <i class="fas fa-map-marker-alt"></i> CRMEF – Marrakech Safi
+          </div>
+          <div class="profile-info-item">
+            <i class="fas fa-school"></i> Lycée Ibn Abbad – Stage MSP
+          </div>
+          <div class="profile-info-item">
+            <i class="fas fa-calendar-alt"></i> Promotion 2025–2026
+          </div>
+          <div class="profile-info-item">
+            <i class="fas fa-laptop-code"></i> Spécialité : Informatique Collège
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ À PROPOS ============ -->
+<section id="apropos">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge"><span>À Propos de Moi</span></div>
+      <h2 class="section-title">Mon Profil Professionnel</h2>
+      <p class="section-desc">Enseignant passionné par la pédagogie numérique et la didactique de l'informatique</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-content">
+        <p class="about-intro">
+          Je suis professeur en informatique au niveau collège, actuellement en formation
+          au <strong>Centre Régional des Métiers de l'Éducation et de la Formation (CRMEF)</strong>
+          de Marrakech – Safi, promotion 2025/2026. Ma formation combine théorie pédagogique
+          approfondie et pratique professionnelle sur le terrain.
+        </p>
+        <div class="about-highlight">
+          « L'informatique n'est pas seulement une matière à enseigner, c'est un outil de pensée.
+          Mon objectif est de donner aux élèves les compétences numériques essentielles pour leur
+          épanouissement dans un monde en constante évolution. »
+        </div>
+        <div class="skills-grid">
+          <div class="skill-item"><i class="fas fa-code"></i> Algorithmique & Programmation</div>
+          <div class="skill-item"><i class="fas fa-chalkboard"></i> Pédagogie Active</div>
+          <div class="skill-item"><i class="fas fa-photo-film"></i> Multimédia Éducatif</div>
+          <div class="skill-item"><i class="fas fa-network-wired"></i> Réseaux Informatiques</div>
+          <div class="skill-item"><i class="fas fa-brain"></i> Didactique de l'Informatique</div>
+          <div class="skill-item"><i class="fas fa-laptop-code"></i> Développement Web</div>
+          <div class="skill-item"><i class="fas fa-database"></i> Bases de Données</div>
+          <div class="skill-item"><i class="fas fa-robot"></i> Intégration TICE (SAMR/RABY)</div>
+        </div>
+        <a href="#" class="btn-primary" style="display:inline-flex">
+          <i class="fas fa-download"></i> Télécharger mon CV
+        </a>
+      </div>
+      <div class="about-aside">
+        <div class="info-card">
+          <div class="info-card-title"><i class="fas fa-id-card"></i> Informations Personnelles</div>
+          <div class="info-row">
+            <i class="fas fa-user"></i>
+            <div class="info-row-content">
+              <div class="info-row-label">Nom Complet</div>
+              [Votre Nom Complet]
+            </div>
+          </div>
+          <div class="info-row">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="info-row-content">
+              <div class="info-row-label">Ville</div>Marrakech, Maroc
+            </div>
+          </div>
+          <div class="info-row">
+            <i class="fas fa-envelope"></i>
+            <div class="info-row-content">
+              <div class="info-row-label">Email</div>votre.email@exemple.com
+            </div>
+          </div>
+          <div class="info-row">
+            <i class="fas fa-graduation-cap"></i>
+            <div class="info-row-content">
+              <div class="info-row-label">Établissement</div>CRMEF Marrakech-Safi
+            </div>
+          </div>
+          <div class="info-row">
+            <i class="fas fa-book"></i>
+            <div class="info-row-content">
+              <div class="info-row-label">Spécialité</div>Informatique – Niveau Collège
+            </div>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-title"><i class="fas fa-history"></i> Parcours de Formation</div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+              <div class="timeline-body">
+                <div class="timeline-year">2025 – 2026</div>
+                <div class="timeline-title-t">Formation CRMEF</div>
+                <div class="timeline-sub">Marrakech-Safi · Prof. Informatique Collège</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"><i class="fas fa-chalkboard-teacher"></i></div>
+              <div class="timeline-body">
+                <div class="timeline-year">2026</div>
+                <div class="timeline-title-t">Stage MSP – Lycée Ibn Abbad</div>
+                <div class="timeline-sub">Algorithmique · Python · Tronc Commun</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"><i class="fas fa-lightbulb"></i></div>
+              <div class="timeline-body">
+                <div class="timeline-year">2026</div>
+                <div class="timeline-title-t">Projet de Fin de Formation (PFE)</div>
+                <div class="timeline-sub">Projet innovant – Domaine éducatif</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MSP ============ -->
+<section id="msp">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge"><span>Mise en Situation Professionnelle</span></div>
+      <h2 class="section-title">Mes Stages MSP</h2>
+      <p class="section-desc">Rapports, fiches pédagogiques, évaluations et réflexions de mes stages pratiques sur le terrain</p>
+    </div>
+
+    <!-- Stats MSP -->
+    <div class="msp-stats">
+      <div class="msp-stat">
+        <div class="msp-stat-icon" style="background:#eff6ff; color:#2563eb"><i class="fas fa-school"></i></div>
+        <div class="msp-stat-num">Lycée Ibn Abbad</div>
+        <div class="msp-stat-label">Établissement d'accueil</div>
+      </div>
+      <div class="msp-stat">
+        <div class="msp-stat-icon" style="background:#f0fdf4; color:#16a34a"><i class="fas fa-users-class"></i></div>
+        <div class="msp-stat-num">TC Scientifique</div>
+        <div class="msp-stat-label">Niveau enseigné</div>
+      </div>
+      <div class="msp-stat">
+        <div class="msp-stat-icon" style="background:#fef3c7; color:#d97706"><i class="fas fa-file-alt"></i></div>
+        <div class="msp-stat-num">Rapports & Fiches</div>
+        <div class="msp-stat-label">Documents produits</div>
+      </div>
+    </div>
+
+    <!-- MSP Cards -->
+    <div class="msp-grid">
+      <!-- MSP 1 -->
+      <div class="msp-card">
+        <div class="msp-card-header">
+          <span class="msp-badge">MSP 1 · Semestre 1</span>
+          <div class="msp-card-title">Observation et Analyse</div>
+          <div class="msp-card-sub">Première immersion en classe</div>
+        </div>
+        <div class="msp-card-body">
+          <div class="msp-meta">
+            <div class="msp-meta-item"><i class="fas fa-calendar"></i> Février 2026</div>
+            <div class="msp-meta-item"><i class="fas fa-book-open"></i> Algorithmique – Tronc Commun</div>
+            <div class="msp-meta-item"><i class="fas fa-map-marker-alt"></i> Lycée Ibn Abbad, Marrakech</div>
+          </div>
+          <div class="resource-list">
+            <a href="#" class="resource-item res-pdf"><i class="fas fa-file-pdf"></i> Rapport MSP 1 – Jour 1</a>
+            <a href="#" class="resource-item res-word"><i class="fas fa-file-word"></i> Fiche Pédagogique</a>
+            <a href="#" class="resource-item res-img"><i class="fas fa-images"></i> Photos de Classe</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MSP 2 -->
+      <div class="msp-card">
+        <div class="msp-card-header" style="background: linear-gradient(135deg, #065f46 0%, #059669 100%)">
+          <span class="msp-badge">MSP 2 · Semestre 1</span>
+          <div class="msp-card-title">Prise en Charge Partielle</div>
+          <div class="msp-card-sub">Animation d'une séquence complète</div>
+        </div>
+        <div class="msp-card-body">
+          <div class="msp-meta">
+            <div class="msp-meta-item"><i class="fas fa-calendar"></i> Mars 2026</div>
+            <div class="msp-meta-item"><i class="fas fa-book-open"></i> Python – Évaluation Pratique</div>
+            <div class="msp-meta-item"><i class="fas fa-map-marker-alt"></i> Lycée Ibn Abbad, Marrakech</div>
+          </div>
+          <div class="resource-list">
+            <a href="#" class="resource-item res-pdf"><i class="fas fa-file-pdf"></i> Rapport MSP 2</a>
+            <a href="#" class="resource-item res-word"><i class="fas fa-file-word"></i> Séquence Python</a>
+            <a href="#" class="resource-item res-pdf"><i class="fas fa-file-pdf"></i> Grille d'Évaluation</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MSP 3 / PFE -->
+      <div class="msp-card">
+        <div class="msp-card-header" style="background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%)">
+          <span class="msp-badge">PFE · Projet Fin Formation</span>
+          <div class="msp-card-title">Projet Innovant</div>
+          <div class="msp-card-sub">Outil numérique éducatif</div>
+        </div>
+        <div class="msp-card-body">
+          <div class="msp-meta">
+            <div class="msp-meta-item"><i class="fas fa-calendar"></i> 2026</div>
+            <div class="msp-meta-item"><i class="fas fa-lightbulb"></i> Projet numérique pédagogique</div>
+            <div class="msp-meta-item"><i class="fas fa-university"></i> CRMEF Marrakech-Safi</div>
+          </div>
+          <div class="resource-list">
+            <a href="#" class="resource-item res-pdf"><i class="fas fa-file-pdf"></i> Rapport PFE</a>
+            <a href="#" class="resource-item res-link"><i class="fas fa-external-link-alt"></i> Démonstration</a>
+            <a href="#" class="resource-item res-img"><i class="fas fa-images"></i> Présentation PPT</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CRMEF ============ -->
+<section id="crmef">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge"><span>Ressources CRMEF</span></div>
+      <h2 class="section-title">Mes Cours & Modules</h2>
+      <p class="section-desc">Résumés, fiches, PDFs et supports de cours organisés par semestre</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="sem-tabs" role="tablist">
+      <button class="sem-tab active" onclick="switchTab('sem1', this)" role="tab">
+        <i class="fas fa-1"></i> Semestre 1
+      </button>
+      <button class="sem-tab" onclick="switchTab('sem2', this)" role="tab">
+        <i class="fas fa-2"></i> Semestre 2
+      </button>
+    </div>
+
+    <!-- SEMESTRE 1 -->
+    <div id="sem1" class="sem-content active">
+      <div class="modules-grid">
+        <!-- Module 1 -->
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon" style="background:#eff6ff"><span>📘</span></div>
+            <div class="module-info">
+              <div class="module-num" style="color:#2563eb">Module 1 – S1</div>
+              <div class="module-title">Concepts Généraux de la Didactique</div>
+            </div>
+          </div>
+          <div class="module-divider"></div>
+          <div class="module-resources">
+            <a href="#" class="mod-res-item"><i class="fas fa-file-pdf" style="color:#ef4444"></i> Résumé Complet – PDF</a>
+            <a href="#" class="mod-res-item"><i class="fas fa-file-word" style="color:#2563eb"></i> Fiche Word</a>
+            <a href="#" class="mod-res-item"><i class="fas fa-images" style="color:#8b5cf6"></i> Diaporama</a>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon" style="background:#fefce8"><span>🧪</span></div>
+            <div class="module-info">
+              <div class="module-num" style="color:#ca8a04">Module 2 – S1</div>
+              <div class="module-title">Épistémologie de l'Informatique</div>
+            </div>
+          </div>
+          <div class="module-divider"></div>
+          <div class="module-resources">
+            <a href="#" class="mod-res-item"><i class="fas fa-file-pdf" style="color:#ef4444"></i> Cours PDF</a>
+            <a href="#" class="mod-res-item"><i class="fas fa-file-word" style="color:#2563eb"></i> Résumé Word</a>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon" style="background:#f0fdf4"><span>🧠</span></div>
+            <div class="module-info">
+              <div class="module-num" style="color:#16a34a">Module 3 – S1</div>
+              <div class="module-title">Théories d'Apprentissage</div>
+            </div>
+          </div>
+          <div class="module-divider"></div>
+          <div class="module-resources">
+            <a href="#" class="mod-res-item"><i class="fas fa-file-pdf" style="color:#ef4444"></i> Résumé PDF</a>
+            <a href="#" class="mod-res-item"><i class="fas fa-images" style="color:#8b5cf6"></i> Schémas Comparatifs</a>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon" style="background:#fdf4ff"><span>📐</span></div>
+            <div class="module-info">
+              <div class="module-num" style="color:#9333ea">Module 4 – S1</div>
+              <div class="module-title">Théorie des Situations Didactiques</div>
+            </div>
+          </div>
+          <div class="module-divider"></div>
+          <div class="module-resources">
+            <a href="#" class="mod-res-item"><i class="fas fa-file-pdf" style="color:#ef4444"></i> Cours Brousseau PDF</a>
+            <a href="#" class="mod-res-item"><i class="fas fa-file-word" style="color:#2563eb"></i> Fiche Résumé</a>
+          </div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon" style="background:#fff7ed"><span>🎯</span></div>
+            <div class="module-info">
+              <div class="module-num" style="color:#ea580c">Module 5 – S1</div>
+              <div class="module-title">Charge Cognitive & Multimédia</div>
+            </div>
+          </div>
+          <div class="module-divider"></div>
+          <div class="module-resources">
+            <a href="#" class="mod-res-item"><i class="fas fa-file-pdf" style="color:#ef4444"></i> Théorie de Sweller PDF</a>
+            <a href="#" class="mod-res-item"><i class="fas fa-images" style="color:#8b5cf6"></i> Principes Mayer</a>
+          </div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon" style="background:#fef2f2"><span>🔬</span></div>
+            <div class="module-info">
+              <div class="module-num" style="color:#dc2626">Module 6 – S1</div>
+              <div class="module-title">Modèle de Planification Pédagogique</div>
+            </div>
+          </div>
+          <div class="module-divider"></div>
+          <div class="module-resources">
+            <a href="#" class="mod-res-item"><i class="fas fa-file-pdf" style="color:#ef4444"></i> Modèle Complet</a>
+            <a href="#" class="mod-res-item"><i class="fas fa-file-word" style="color:#2563eb"></i> Fiche Pratique</a>
+          </div>
+        </div>
+
+        <!-- Ajout de document -->
+        <div class="module-card" style="border-style: dashed; background: transparent;">
+          <div style="padding: 40px 20px; text-align: center;">
+            <a href="#" class="upload-placeholder">
+              <i class="fas fa-plus-circle" style="color: var(--primary-light); font-size: 32px;"></i>
+              <strong style="color: var(--primary); font-size: 14px;">Ajouter un Module</strong>
+              <span style="font-size: 12px;">Cliquez pour ajouter un PDF, image ou résumé</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEMESTRE 2 -->
+    <div id="sem2" class="sem-content">
+      <div class="modules-grid">
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon" style="background:#eff6ff"><span>🌐</span></div>
+            <div class="module-info">
+              <div class="module-num" style="color:#2563eb">Module 1 – S2</div>
+              <div class="module-title">Sciences de l'Éducation</div>
+            </div>
+          </div>
+          <div class="module-divider"></div>
+          <div class="module-resources">
+            <a href="#" class="mod-res-item"><i class="fas fa-file-pdf" style="color:#ef4444"></i> Résumé Sciences Éducation</a>
+            <a href="#" class="mod-res-item"><i class="fas fa-file-word" style="color:#2563eb"></i> Fiche Word Organisée</a>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon" style="background:#f0fdf4"><span>🏫</span></div>
+            <div class="module-info">
+              <div class="module-num" style="color:#16a34a">Module 2 – S2</div>
+              <div class="module-title">Sociologie de l'Éducation</div>
+            </div>
+          </div>
+          <div class="module-divider"></div>
+          <div class="module-resources">
+            <a href="#" class="mod-res-item"><i class="fas fa-file-pdf" style="color:#ef4444"></i> Cours Sociologie PDF</a>
+            <a href="#" class="mod-res-item"><i class="fas fa-images" style="color:#8b5cf6"></i> Schémas</a>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon" style="background:#fefce8"><span>📊</span></div>
+            <div class="module-info">
+              <div class="module-num" style="color:#ca8a04">Module 3 – S2</div>
+              <div class="module-title">Évaluation & Compétences</div>
+            </div>
+          </div>
+          <div class="module-divider"></div>
+          <div class="module-resources">
+            <a href="#" class="mod-res-item"><i class="fas fa-file-pdf" style="color:#ef4444"></i> Approche par Compétences</a>
+            <a href="#" class="mod-res-item"><i class="fas fa-file-word" style="color:#2563eb"></i> Outils d'Évaluation</a>
+          </div>
+        </div>
+
+        <div class="module-card">
+          <div class="module-card-top">
+            <div class="module-icon" style="background:#fdf4ff"><span>💡</span></div>
+            <div class="module-info">
+              <div class="module-num" style="color:#9333ea">Module 4 – S2</div>
+              <div class="module-title">TICE & Intégration Numérique</div>
+            </div>
+          </div>
+          <div class="module-divider"></div>
+          <div class="module-resources">
+            <a href="#" class="mod-res-item"><i class="fas fa-file-pdf" style="color:#ef4444"></i> Modèles SAMR / RABY</a>
+            <a href="#" class="mod-res-item"><i class="fas fa-images" style="color:#8b5cf6"></i> Supports Numériques</a>
+          </div>
+        </div>
+
+        <div class="module-card" style="border-style: dashed; background: transparent;">
+          <div style="padding: 40px 20px; text-align: center;">
+            <a href="#" class="upload-placeholder">
+              <i class="fas fa-plus-circle" style="color: var(--primary-light); font-size: 32px;"></i>
+              <strong style="color: var(--primary); font-size: 14px;">Ajouter un Module S2</strong>
+              <span>PDF, Image, Résumé Word...</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIENS IMPORTANTS ============ -->
+<section id="liens">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge"><span>Ressources Externes</span></div>
+      <h2 class="section-title">Liens Importants</h2>
+      <p class="section-desc">Plateformes officielles, outils pédagogiques et ressources professionnelles utiles</p>
+    </div>
+    <div class="liens-grid">
+      <a href="https://www.men.gov.ma" target="_blank" class="lien-card">
+        <div class="lien-icon" style="background:#eff6ff; color:#2563eb"><i class="fas fa-landmark"></i></div>
+        <div class="lien-title">Ministère de l'Éducation Nationale</div>
+        <div class="lien-desc">Portail officiel MEN – Maroc. Textes officiels, programmes et circulaires.</div>
+        <div class="lien-url"><i class="fas fa-external-link-alt"></i> men.gov.ma</div>
+      </a>
+
+      <a href="https://taalimtice.men.gov.ma" target="_blank" class="lien-card">
+        <div class="lien-icon" style="background:#f0fdf4; color:#16a34a"><i class="fas fa-laptop-code"></i></div>
+        <div class="lien-title">Plateforme TAALIM TICE</div>
+        <div class="lien-desc">Ressources numériques officielles pour les enseignants d'informatique.</div>
+        <div class="lien-url"><i class="fas fa-external-link-alt"></i> taalimtice.men.gov.ma</div>
+      </a>
+
+      <a href="https://massarservice.men.gov.ma" target="_blank" class="lien-card">
+        <div class="lien-icon" style="background:#fefce8; color:#ca8a04"><i class="fas fa-database"></i></div>
+        <div class="lien-title">Massar Service</div>
+        <div class="lien-desc">Système de gestion des établissements scolaires marocains.</div>
+        <div class="lien-url"><i class="fas fa-external-link-alt"></i> massarservice.men.gov.ma</div>
+      </a>
+
+      <a href="https://scratch.mit.edu" target="_blank" class="lien-card">
+        <div class="lien-icon" style="background:#fff7ed; color:#ea580c"><i class="fas fa-gamepad"></i></div>
+        <div class="lien-title">Scratch – MIT</div>
+        <div class="lien-desc">Outil de programmation visuelle pour l'initiation algorithmique au collège.</div>
+        <div class="lien-url"><i class="fas fa-external-link-alt"></i> scratch.mit.edu</div>
+      </a>
+
+      <a href="https://www.w3schools.com" target="_blank" class="lien-card">
+        <div class="lien-icon" style="background:#fdf4ff; color:#9333ea"><i class="fas fa-code"></i></div>
+        <div class="lien-title">W3Schools</div>
+        <div class="lien-desc">Référence web pour HTML, CSS, JavaScript, Python et les bases de l'informatique.</div>
+        <div class="lien-url"><i class="fas fa-external-link-alt"></i> w3schools.com</div>
+      </a>
+
+      <a href="https://www.canva.com" target="_blank" class="lien-card">
+        <div class="lien-icon" style="background:#fef2f2; color:#dc2626"><i class="fas fa-paint-brush"></i></div>
+        <div class="lien-title">Canva – Design Pédagogique</div>
+        <div class="lien-desc">Création de supports visuels, fiches pédagogiques et présentations modernes.</div>
+        <div class="lien-url"><i class="fas fa-external-link-alt"></i> canva.com</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT STRIP -->
+<div class="contact-strip">
+  <div class="container">
+    <h2>Restons en Contact</h2>
+    <p>N'hésitez pas à me contacter pour toute collaboration pédagogique ou échange professionnel.</p>
+    <div class="social-links">
+      <a href="mailto:votre@email.com" class="social-btn" style="background:#eff6ff; color:#2563eb">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="#" class="social-btn" style="background:#f0f9ff; color:#0ea5e9">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="#" class="social-btn" style="background:#f0fdf4; color:#16a34a">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="#" class="social-btn" style="background:#fef3c7; color:#d97706">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Portfolio Numérique – CRMEF Marrakech-Safi · Tous droits réservés</p>
+  <div class="footer-links">
+    <a href="#accueil">Accueil</a>
+    <a href="#apropos">À Propos</a>
+    <a href="#msp">MSP</a>
+    <a href="#crmef">CRMEF</a>
+    <a href="#liens">Liens</a>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<a href="#accueil" class="back-top" id="backTop"><i class="fas fa-arrow-up"></i></a>
+
+<!-- SCRIPTS -->
+<script>
+  // Tab switch
+  function switchTab(semId, btn) {
+    document.querySelectorAll('.sem-content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.sem-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById(semId).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  // Navbar active link on scroll
+  const sections = document.querySelectorAll('section[id], .contact-strip');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY + 100;
+    sections.forEach(s => {
+      if (scrollY >= s.offsetTop && scrollY < s.offsetTop + s.offsetHeight) {
+        navLinks.forEach(l => {
+          l.classList.toggle('active', l.getAttribute('href') === '#' + s.id);
+        });
+      }
+    });
+    // Navbar shadow on scroll
+    document.getElementById('navbar').style.boxShadow = scrollY > 10 ? '0 4px 30px rgba(0,0,0,0.3)' : 'none';
+    // Back to top visibility
+    document.getElementById('backTop').classList.toggle('visible', scrollY > 300);
+  });
+
+  // Hamburger menu (mobile)
+  function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    if (nav.style.display === 'flex') {
+      nav.style.display = 'none';
+    } else {
+      nav.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:rgba(15,23,42,0.97);padding:20px;gap:4px;z-index:999;';
+    }
+  }
+</script>
+</body>
+</html>

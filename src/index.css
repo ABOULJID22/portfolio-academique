@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg text-text antialiased;
+  font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.section-title {
+  font-family: 'Playfair Display', serif;
+}
+
+::selection {
+  background: rgba(14, 165, 233, 0.2);
+}
+
+@layer components {
+  .portfolio-container {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-shell {
+    @apply py-16 sm:py-20;
+  }
+
+  .glass-card {
+    @apply rounded-card border border-white/10 bg-white/10 backdrop-blur-xl;
+  }
+
+  .soft-card {
+    @apply rounded-card border border-border bg-white shadow-sm;
+  }
+
+  .section-badge {
+    @apply mb-4 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-primary-light;
+  }
+
+  .section-badge::before,
+  .section-badge::after {
+    content: '';
+    @apply h-px w-8 bg-primary-light;
+  }
+
+  .section-title {
+    @apply text-3xl font-extrabold leading-tight text-dark sm:text-4xl;
+  }
+
+  .section-desc {
+    @apply mx-auto mt-4 max-w-3xl text-base leading-7 text-text-light;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient1 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:border-white hover:bg-white/5;
+  }
+
+  .nav-link {
+    @apply rounded-lg px-3 py-2 text-sm font-medium text-white/75 transition hover:bg-white/10 hover:text-white;
+  }
+
+  .nav-link-active {
+    @apply bg-white/10 text-white;
+  }
+
+  .page-gradient {
+    background: radial-gradient(circle at top right, rgba(14, 165, 233, 0.18), transparent 30%),
+      linear-gradient(135deg, #0f172a 0%, #1a3c6e 100%);
+  }
+
+  /* Center images and set approximate display size (50% width, 50% viewport height) */
+  .portfolio-container .img {
+    @apply block mx-auto object-cover;
+    width: 50%;
+    max-width: 50%;
+    height: 50vh;
+    max-height: 50vh;
+  }
+}

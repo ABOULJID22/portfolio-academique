@@ -10,6 +10,7 @@ export default function App() {
     <Routes>
       <Route element={<MainLayout />}>
         <Route index element={<HomePage />} />
+        <Route path="pr-abouljidmohamed" element={<HomePage />} />
         <Route path="msp" element={<MSPPage />} />
         <Route path="apropos" element={<Navigate to="/#apropos" replace />} />
         <Route path="contact" element={<Navigate to="/#contact" replace />} />

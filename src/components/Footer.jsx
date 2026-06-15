@@ -40,7 +40,7 @@ export default function Footer() {
                 </span>
               </span>
               <span>
-                <span className="block text-xs font-bold uppercase tracking-[0.18em] text-sky-300">Portfolio CRMEF</span>
+                <span className="block text-xs font-bold uppercase tracking-[0.18em] text-sky-300">Portfolio</span>
                 <span className="mt-1 block text-lg font-extrabold text-white">Pr. Abouljid Mohamed</span>
               </span>
             </Link>

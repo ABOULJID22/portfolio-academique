@@ -10,9 +10,16 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body,
+#root {
+  min-width: 0;
+}
+
 body {
   @apply bg-bg text-text antialiased;
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
 h1,
@@ -33,7 +40,7 @@ h4,
   }
 
   .section-shell {
-    @apply py-16 sm:py-20;
+    @apply py-12 sm:py-16 lg:py-20;
   }
 
   .glass-card {
@@ -45,21 +52,21 @@ h4,
   }
 
   .section-badge {
-    @apply mb-4 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-primary-light;
+    @apply mb-4 inline-flex items-center gap-2 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-primary-light sm:gap-3 sm:text-xs sm:tracking-[0.18em];
   }
 
   .section-badge::before,
   .section-badge::after {
     content: '';
-    @apply h-px w-8 bg-primary-light;
+    @apply h-px w-5 bg-primary-light sm:w-8;
   }
 
   .section-title {
-    @apply text-3xl font-extrabold leading-tight text-dark sm:text-4xl;
+    @apply text-2xl font-extrabold leading-tight text-dark sm:text-3xl lg:text-4xl;
   }
 
   .section-desc {
-    @apply mx-auto mt-4 max-w-3xl text-base leading-7 text-text-light;
+    @apply mx-auto mt-4 max-w-3xl text-sm leading-7 text-text-light sm:text-base;
   }
 
   .btn-primary {

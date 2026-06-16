@@ -53,14 +53,14 @@ export default function Header() {
   }, [location.pathname, location.hash]);
 
   const linkClassName = (active) =>
-    `group relative inline-flex items-center gap-2 rounded-full px-3.5 py-2 text-sm font-semibold transition-all duration-300 ${
+    `group relative inline-flex items-center gap-2 rounded-full px-3 py-2 text-xs font-semibold transition-all duration-300 2xl:px-3.5 2xl:text-sm ${
       active
         ? 'bg-white text-dark shadow-sm'
         : 'text-white/75 hover:bg-white/10 hover:text-white'
     }`;
 
   const mobileLinkClassName = (active) =>
-    `group flex items-center justify-between rounded-xl border px-4 py-3 text-sm font-semibold transition-all duration-300 ${
+    `group flex items-center justify-between gap-3 rounded-xl border px-3.5 py-3 text-sm font-semibold transition-all duration-300 sm:px-4 ${
       active
         ? 'border-sky-300/40 bg-sky-300/[0.15] text-sky-100'
         : 'border-white/10 bg-white/[0.03] text-white/[0.78] hover:border-white/20 hover:bg-white/[0.08] hover:text-white'
@@ -105,9 +105,9 @@ export default function Header() {
 
       return (
         <Link key={link.path} to={link.path} className={mobileLinkClassName(active)}>
-          <span className="flex items-center gap-3">
+          <span className="flex min-w-0 items-center gap-3">
             <Icon size={17} aria-hidden="true" />
-            {link.label}
+            <span className="truncate">{link.label}</span>
           </span>
           <FiArrowUpRight size={15} className="text-white/[0.35] transition group-hover:text-sky-200" aria-hidden="true" />
         </Link>
@@ -121,9 +121,9 @@ export default function Header() {
 
           return (
             <>
-              <span className="flex items-center gap-3">
+              <span className="flex min-w-0 items-center gap-3">
                 <Icon size={17} aria-hidden="true" />
-                {link.label}
+                <span className="truncate">{link.label}</span>
               </span>
               <FiArrowUpRight
                 size={15}
@@ -143,12 +143,12 @@ export default function Header() {
         shadow ? 'shadow-[0_12px_35px_rgba(15,23,42,0.28)]' : ''
       }`}
     >
-      <div className="portfolio-container flex h-[78px] items-center justify-between gap-3 sm:gap-4">
+      <div className="portfolio-container flex h-16 items-center justify-between gap-2 px-3 sm:h-[72px] sm:gap-4 sm:px-6 lg:px-8 xl:h-[78px]">
         <Link
           to="/"
-          className="group flex min-w-0 items-center gap-3 rounded-full pr-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300"
+          className="group flex min-w-0 items-center gap-2 rounded-full transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sky-300 sm:gap-3 sm:pr-2"
         >
-          <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white p-[3px] shadow-[0_10px_28px_rgba(14,165,233,0.24)] ring-1 ring-white/25 transition duration-300 group-hover:scale-[1.03] group-hover:ring-sky-300/70 sm:h-12 sm:w-12">
+          <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white p-[3px] shadow-[0_10px_28px_rgba(14,165,233,0.24)] ring-1 ring-white/25 transition duration-300 group-hover:scale-[1.03] group-hover:ring-sky-300/70 sm:h-12 sm:w-12">
             <span className="absolute inset-0 rounded-full bg-[conic-gradient(from_160deg,#38bdf8,#ffffff,#2563eb,#38bdf8)] opacity-80 blur-[1px]" aria-hidden="true" />
             <span className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-gradient1">
               <img src={profileImage} alt="Logo Portfolio CRMEF" className="block h-full w-full scale-[1.28] object-cover object-[center_44%]" />
@@ -156,23 +156,23 @@ export default function Header() {
           </span>
 
           <span className="min-w-0 leading-tight">
-            <span className="block text-[0.68rem] font-extrabold uppercase tracking-[0.18em] text-sky-300 sm:text-[0.7rem]">
+            <span className="block text-[0.58rem] font-extrabold uppercase tracking-[0.12em] text-sky-300 sm:text-[0.7rem] sm:tracking-[0.18em]">
               Portfolio 
             </span>
-            <span className="mt-1 block max-w-[145px] truncate text-sm font-extrabold tracking-[0.02em] text-white transition group-hover:text-sky-50 sm:max-w-none sm:text-[15px]">
+            <span className="mt-1 block max-w-[8.75rem] truncate text-xs font-extrabold tracking-[0.02em] text-white transition group-hover:text-sky-50 sm:max-w-none sm:text-[15px]">
               Pr. Abouljid Mohamed
             </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1 lg:flex">
+        <nav className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] p-1 xl:flex">
           {navLinks.map((link) => renderDesktopLink(link))}
         </nav>
 
         <div className="flex items-center gap-2">
           <Link
             to="/#contact"
-            className="hidden items-center gap-2 rounded-full border border-sky-300/25 bg-sky-300/10 px-4 py-2 text-sm font-bold text-sky-100 transition hover:border-sky-200/70 hover:bg-sky-300/[0.15] xl:inline-flex"
+            className="hidden shrink-0 items-center gap-2 rounded-full border border-sky-300/25 bg-sky-300/10 px-3.5 py-2 text-xs font-bold text-sky-100 transition hover:border-sky-200/70 hover:bg-sky-300/[0.15] xl:inline-flex 2xl:px-4 2xl:text-sm"
           >
             Contact
             <FiArrowUpRight size={15} aria-hidden="true" />
@@ -181,7 +181,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMobileOpen((value) => !value)}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-white transition hover:border-sky-300/40 hover:bg-sky-300/10 lg:hidden"
+            className="fixed right-[clamp(0.75rem,calc(100vw-378px),7rem)] top-3 z-[60] inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.06] text-white transition hover:border-sky-300/40 hover:bg-sky-300/10 sm:static sm:h-11 sm:w-11 xl:hidden"
             aria-label="Menu"
             aria-expanded={mobileOpen}
           >
@@ -191,9 +191,9 @@ export default function Header() {
       </div>
 
       {mobileOpen ? (
-        <div className="border-t border-white/10 bg-dark/[0.98] lg:hidden">
-          <div className="portfolio-container py-4">
-            <div className="grid gap-2 sm:grid-cols-2">
+        <div className="max-h-[calc(100svh-64px)] overflow-y-auto border-t border-white/10 bg-dark/[0.98] sm:max-h-[calc(100svh-72px)] xl:hidden">
+          <div className="portfolio-container py-3 sm:py-4">
+            <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {navLinks.map((link) => renderMobileLink(link))}
             </div>
 

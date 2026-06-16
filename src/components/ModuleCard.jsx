@@ -3,14 +3,14 @@ import ModuleIcon from './ModuleIcon';
 
 export default function ModuleCard({ module }) {
   return (
-    <article className="soft-card overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-md">
+    <article className="soft-card h-full overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-md">
       <div className="flex items-start gap-4 p-5">
         <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] text-lg ${module.accent}`}>
           <ModuleIcon module={module} />
         </div>
-        <div>
+        <div className="min-w-0">
           <div className="mb-1 text-[10px] font-bold uppercase tracking-[0.14em] text-primary-light">{module.semester}</div>
-          <h3 className="text-sm font-bold text-dark">{module.title}</h3>
+          <h3 className="text-sm font-bold leading-5 text-dark">{module.title}</h3>
         </div>
       </div>
       <div className="h-px bg-border" />

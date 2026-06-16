@@ -163,7 +163,7 @@ const ppeSlides = [
     title: 'Une plateforme web simple et lisible',
     description: "Le projet met l'accent sur une expérience rassurante : comprendre son profil, explorer les pistes possibles et préparer son parcours.",
     image: orientation5,
-    imageMode: 'contain',
+    imageMode: 'cover',
     points: ['Interface pédagogique', 'Parcours guidé', 'Orientation scolaire'],
   },
   {
@@ -179,7 +179,7 @@ const ppeSlides = [
     title: 'Une plateforme web simple et lisible',
     description: "Le projet met l'accent sur une expérience rassurante : comprendre son profil, explorer les pistes possibles et préparer son parcours.",
     image: orientation4,
-    imageMode: 'contain',
+    imageMode: 'cover',
     points: ['Interface pédagogique', 'Parcours guidé', 'Orientation scolaire'],
   },
    {
@@ -187,7 +187,7 @@ const ppeSlides = [
     title: 'Une plateforme web simple et lisible',
     description: "Le projet met l'accent sur une expérience rassurante : comprendre son profil, explorer les pistes possibles et préparer son parcours.",
     image: orientation1,
-    imageMode: 'contain',
+    imageMode: 'cover',
     points: ['Interface pédagogique', 'Parcours guidé', 'Orientation scolaire'],
   },
 ];
@@ -264,20 +264,20 @@ export default function HomePage() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <main>
+    <main className="overflow-x-hidden">
      
 {/* Accueil */}
     <section
 
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-[#0B1020] text-white border-t rounded-b-2xl border-white/10"
+      className="relative flex min-h-[calc(100svh-64px)] items-center overflow-hidden rounded-b-2xl border-t border-white/10 bg-[#0B1020] text-white sm:min-h-[calc(100svh-72px)] xl:min-h-[calc(100svh-78px)]"
     >
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
 
-        <div className="absolute top-[-10%] right-[-5%] h-[500px] w-[500px] rounded-full bg-blue-900/20 blur-[120px]" />
-        <div className="absolute bottom-[-10%] left-[-5%] h-[400px] w-[400px] rounded-full bg-sky-400/10 blur-[100px]" />
+        <div className="absolute right-[-35%] top-[-18%] h-[300px] w-[300px] rounded-full bg-blue-900/20 blur-[90px] sm:right-[-12%] sm:h-[420px] sm:w-[420px] lg:right-[-5%] lg:h-[500px] lg:w-[500px] lg:blur-[120px]" />
+        <div className="absolute bottom-[-18%] left-[-35%] h-[260px] w-[260px] rounded-full bg-sky-400/10 blur-[80px] sm:left-[-12%] sm:h-[360px] sm:w-[360px] lg:left-[-5%] lg:h-[400px] lg:w-[400px] lg:blur-[100px]" />
 
         <div
           className="absolute inset-0 opacity-20 [mask-image:radial-gradient(ellipse_at_center,black,transparent)]"
@@ -289,14 +289,14 @@ export default function HomePage() {
         />
       </div>
 
-      <div className="portfolio-container relative z-10 py-8 sm:py-12 md:py-16 lg:py-20">
+      <div className="portfolio-container relative z-10 py-10 sm:py-12 md:py-16 lg:py-20">
         <div className="grid items-center gap-8 sm:gap-10 md:gap-12 lg:gap-16 lg:grid-cols-2">
           {/* Left */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="flex flex-col items-start"
+            className="flex min-w-0 max-w-[22rem] flex-col items-start sm:max-w-none"
           >
            {/*  <motion.div variants={itemVariants} className="mb-4 sm:mb-5 md:mb-6 flex items-center gap-2 sm:gap-3">
               <span className="h-[1px] w-6 sm:w-8 bg-sky-400" />
@@ -308,7 +308,7 @@ export default function HomePage() {
 
             <motion.h1
               variants={itemVariants}
-              className="font-academic text-2xl sm:text-3xl md:text-5xl lg:text-6xl leading-tight sm:leading-tight md:leading-none tracking-tight"
+              className="font-academic text-4xl leading-tight tracking-tight sm:text-5xl md:text-6xl lg:leading-none"
             >
               Pr. ABOULJID <br />
               <span className="italic text-sky-300">Mohamed</span>
@@ -316,7 +316,7 @@ export default function HomePage() {
 
             <motion.p
               variants={itemVariants}
-              className="mt-5 sm:mt-6 md:mt-8 max-w-xl text-sm sm:text-base md:text-lg leading-relaxed text-slate-300 font-light"
+              className="mt-5 max-w-xl text-sm font-light leading-relaxed text-slate-300 sm:mt-6 sm:text-base md:mt-8 md:text-lg"
             >
               Portfolio numérique académique dédié à l'enseignement de l'informatique.
               Un espace regroupant{" "}
@@ -324,7 +324,7 @@ export default function HomePage() {
               analyses de stages <span className="font-semibold text-white">MSP</span> et réalisations didactiques.
             </motion.p>
 
-            <motion.div variants={itemVariants} className="mt-5 sm:mt-6 md:mt-8 flex gap-3 sm:gap-4 md:gap-6">
+            <motion.div variants={itemVariants} className="mt-5 flex flex-wrap gap-3 sm:mt-6 sm:gap-4 md:mt-8 md:gap-6">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
@@ -369,7 +369,7 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative"
+            className="relative w-full max-w-[22.5rem] justify-self-center sm:max-w-md lg:max-w-none"
             style={{
               backgroundImage: `
                 linear-gradient(135deg, rgba(5, 15, 35, 0.94) 0%, rgba(10, 28, 65, 0.88) 45%, rgba(18, 54, 120, 0.82) 100%),
@@ -381,7 +381,7 @@ export default function HomePage() {
           >
             <div className="absolute -inset-2 sm:-inset-3 md:-inset-4 -z-10 bg-gradient-to-tr from-sky-500/20 to-blue-500/20 blur-xl sm:blur-2xl" />
 
-            <div className="relative z-10 rotate-1 sm:rotate-2 border border-white/10 bg-white/5 p-2 sm:p-3 md:p-4 backdrop-blur-md transition-transform duration-500 hover:rotate-0">
+            <div className="relative z-10 border border-white/10 bg-white/5 p-2 backdrop-blur-md transition-transform duration-500 hover:rotate-0 sm:rotate-2 sm:p-3 md:p-4">
               <div
                 style={{
                   backgroundImage: `
@@ -485,13 +485,13 @@ export default function HomePage() {
                   ].map((item, i) => (
                     <div
                       key={i}
-                      className="flex items-center justify-between border-b border-white/5 p-2 sm:p-2.5 md:p-3 font-mono text-[9px] sm:text-[10px]"
+                      className="flex flex-col gap-1 border-b border-white/5 p-2 font-mono text-[9px] sm:flex-row sm:items-center sm:justify-between sm:p-2.5 sm:text-[10px] md:p-3"
                     >
                       <span className="flex items-center gap-2 uppercase text-slate-400">
                         <item.icon size={11} className="sm:w-3 sm:h-3 md:w-3.5 md:h-3.5 text-sky-300" />
                         {item.label}
                       </span>
-                      <span className="text-slate-200">{item.val}</span>
+                      <span className="break-words text-slate-200 sm:text-right">{item.val}</span>
                     </div>
                   ))}
                 </div>
@@ -502,7 +502,7 @@ export default function HomePage() {
       </div>
 
       <div className="pointer-events-none absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
-        <svg className="relative block h-[120px] w-full animate-wave" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <svg className="relative block h-12 w-full animate-wave sm:h-20 lg:h-[120px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path
             d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.14-17.73,250.45,16.88C824.6,87.71,881.7,116.3,943.3,117.44c61.6,1.14,123.1-15.71,184.7-31.4"
             fill="none"
@@ -554,7 +554,7 @@ export default function HomePage() {
               />
 
               <motion.section 
-                className="soft-card mb-8 p-6 sm:p-8"  
+                className="soft-card mb-8 p-5 sm:p-8"  
                 style={{
                   backgroundImage: `linear-gradient(rgba(248,250,252,0.94), rgba(255,255,255,0.47)), url(${bg4})`,
                   backgroundSize: 'contain',
@@ -567,14 +567,14 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 variants={cardVariants}
               >
-                <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-10">
+                <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:items-start sm:gap-10 sm:text-left">
                   <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-primary-light/10 text-3xl font-extrabold text-primary-light ring-4 ring-primary-light/20">
                     <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-gradient1">
                       <img src={profileImage} alt="Photo de profil" className="block  scale-[1.18] h-full w-full object-cover object-center"  />
                     </div>
                   </div>
-                  <div>
-                    <h2 className="text-2xl font-extrabold text-dark">Mohamed ABOULJID</h2>
+                  <div className="min-w-0">
+                    <h2 className="text-xl font-extrabold text-dark sm:text-2xl">Mohamed ABOULJID</h2>
                     <p className="mt-1 text-sm font-medium text-accent">Professeur d&apos;Informatique *_* Développeur Full Stack</p>
                     <p className="mt-4 text-base leading-8 text-text">
 {/*                       Professeur en informatique, je suis également développeur Full Stack. Mon parcours allie une solide formation
@@ -591,11 +591,11 @@ export default function HomePage() {
                    de manière active et innovante.
                     </p>
 
-                    <div className="mt-6 rounded-l-card border-l-4 border-primary-light bg-gradient-to-r from-sky-50 to-cyan-50 px-6 py-5 text-[15px] italic leading-8 text-primary">
+                    <div className="mt-6 rounded-l-card border-l-4 border-primary-light bg-gradient-to-r from-sky-50 to-cyan-50 px-4 py-5 text-sm italic leading-7 text-primary sm:px-6 sm:text-[15px] sm:leading-8">
                       « L&apos;informatique n&apos;est pas seulement une matiere a enseigner, c&apos;est un outil de pensee. Mon objectif est de donner aux eleves les competences numeriques essentielles pour leur epanouissement dans un monde en constante evolution. »
                     </div>
 
-                    <div className="mt-5 flex flex-wrap gap-2">
+                    <div className="mt-5 flex flex-wrap justify-center gap-2 sm:justify-start">
                       {[
                         { icon: <FiCode size={13} />, label: 'Full Stack & Mobile' },
                         { icon: <FiBookOpen size={13} />, label: 'Didactique Informatique' },
@@ -626,10 +626,10 @@ export default function HomePage() {
                 variants={containerVariants}
               >
                 <motion.div 
-                  className="soft-card p-6 sm:p-8"
+                  className="soft-card p-5 sm:p-8"
                   variants={itemVariants}
                 >
-                    <h2 className="text-xl font-extrabold text-dark">Parcours & Expériences</h2>
+                    <h2 className="text-lg font-extrabold text-dark sm:text-xl">Parcours & Expériences</h2>
                     <p className="mt-2 text-sm text-text-light">
                       Formation académique, expériences professionnelles et missions d&apos;enseignement.
                     </p>
@@ -659,7 +659,7 @@ export default function HomePage() {
                   </motion.div>
                   <motion.a 
                     href="./src/data/cv/CV_Dec2025_Mohamed_Abouljid.pdf" 
-                    className="download  btn-primary mt-8 inline-flex" target="_blank" 
+                    className="download btn-primary mt-8 w-full sm:w-auto" target="_blank" 
                     variants={itemVariants}
                   >
                     <FiDownload /> Telecharger mon CV
@@ -685,7 +685,7 @@ export default function HomePage() {
                     </div>
                   </div> */}
 
-                  <motion.div className="soft-card p-6 sm:p-6" variants={itemVariants}>
+                  <motion.div className="soft-card p-5 sm:p-6" variants={itemVariants}>
                     <h3 className="text-lg font-bold text-dark">CV & YouTube</h3>
                     <p className="mt-2 text-sm text-text-light">
                       Téléchargez mon CV ou visitez ma chaîne où je partage des tutoriels et ressources pédagogiques
@@ -752,8 +752,8 @@ export default function HomePage() {
                     </div>
                   </motion.div>
 
-                    <motion.div className="soft-card p-6 sm:p-8" variants={itemVariants}>
-                    <h2 className="text-xl font-extrabold text-dark">Compétences</h2>
+                    <motion.div className="soft-card p-5 sm:p-8" variants={itemVariants}>
+                    <h2 className="text-lg font-extrabold text-dark sm:text-xl">Compétences</h2>
                     <p className="mt-2 text-sm text-text-light">Technologies maîtrisées et domaines d&apos;expertise.</p>
                     <div className="mt-5 grid gap-2 sm:grid-cols-2">
                       {aboutSkills.map((skill) => (
@@ -773,10 +773,16 @@ export default function HomePage() {
       </motion.section>
 
 {/* moments */}
-      <motion.div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]" variants={containerVariants}>
+      <motion.div
+        className="portfolio-container grid gap-8 py-12 sm:py-16 lg:grid-cols-[1.15fr_0.85fr]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+      >
         <motion.div className="relative" variants={itemVariants}>
           <div className="mx-auto w-full max-w-xl">
-            <div className="relative h-[420px] sm:h-[460px]">
+            <div className="relative h-[310px] sm:h-[420px] md:h-[460px]">
               {momentsImages.map((image, index) => {
                 const isActive = index === momentsCarouselIndex;
                 const isNext = index === (momentsCarouselIndex + 1) % momentsImages.length;
@@ -788,7 +794,7 @@ export default function HomePage() {
                     className="absolute inset-0"
                     initial={false}
                     animate={{
-                      x: isActive ? 0 : isNext ? 72 : isPrev ? -72 : 0,
+                      x: isActive ? 0 : isNext ? 36 : isPrev ? -36 : 0,
                       scale: isActive ? 1 : 0.84,
                       opacity: isActive ? 1 : 0.55,
                       rotate: isActive ? 0 : isNext ? 6 : isPrev ? -6 : 0,
@@ -796,7 +802,7 @@ export default function HomePage() {
                     }}
                     transition={{ duration: 0.55, ease: 'easeOut' }}
                   >
-                    <div className="group relative h-full overflow-hidden rounded-[2rem] border border-white/70 bg-slate-950 shadow-[0_25px_70px_rgba(15,23,42,0.25)]">
+                    <div className="group relative h-full overflow-hidden rounded-2xl border border-white/70 bg-slate-950 shadow-[0_25px_70px_rgba(15,23,42,0.25)] sm:rounded-[2rem]">
                       <img
                         src={image}
                         alt={`Moments ${index + 1}`}
@@ -804,16 +810,16 @@ export default function HomePage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />
 
-                      <div className="absolute left-6 right-6 top-6 flex items-center justify-between text-white/90">
-                        <div className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] backdrop-blur-md">
+                      <div className="absolute left-4 right-4 top-4 flex flex-col items-start gap-2 text-white/90 sm:left-6 sm:right-6 sm:top-6 sm:flex-row sm:items-center sm:justify-between">
+                        <div className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[9px] font-bold uppercase tracking-[0.16em] backdrop-blur-md sm:text-[10px] sm:tracking-[0.22em]">
                           CRMEF Marrakech
                         </div>
-                        <div className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] font-semibold backdrop-blur-md">
+                        <div className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[9px] font-semibold backdrop-blur-md sm:text-[10px]">
                           Promotion 2025-2026
                         </div>
                       </div>
 
-                      <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-8">
                         <div className="flex items-center justify-between gap-3">
                           <button
                             type="button"
@@ -854,7 +860,7 @@ export default function HomePage() {
         </motion.div>
 
         <motion.div className="space-y-4" variants={containerVariants}>
-          <motion.div className="soft-card p-6" variants={itemVariants}>
+          <motion.div className="soft-card p-5 sm:p-6" variants={itemVariants}>
             <h3 className="text-lg font-bold text-dark">Cadre de Formation</h3>
             <p className="mt-3 text-sm leading-7 text-text">
               Formation professionnelle au CRMEF Marrakech-Safi, orientée pédagogie numérique, didactique de
@@ -862,7 +868,7 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          <motion.div className="soft-card p-6" variants={itemVariants}>
+          <motion.div className="soft-card p-5 sm:p-6" variants={itemVariants}>
             <h3 className="text-lg font-bold text-dark">Objectif Global</h3>
             <p className="mt-3 text-sm leading-7 text-text">
               Construire un profil de professeur d&apos;informatique capable de planifier, enseigner, évaluer et
@@ -893,7 +899,7 @@ export default function HomePage() {
               <SectionHeader badge="Ressources CRMEF" title="Mes Cours & Modules"  />
 
               <motion.div 
-                className="grid gap-8 lg:grid-cols-2 items-center mb-12"
+                className="mb-10 grid items-center gap-8 lg:mb-12 lg:grid-cols-2"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -901,8 +907,8 @@ export default function HomePage() {
               >
                 <motion.div className="space-y-6" variants={itemVariants}>
                   <div>
-                    <h3 className="text-2xl font-bold text-dark mb-4">A Propos du CRMEF</h3>
-                    <div className="space-y-4 text-base leading-8 text-text">
+                    <h3 className="mb-4 text-xl font-bold text-dark sm:text-2xl">A Propos du CRMEF</h3>
+                    <div className="space-y-4 text-sm leading-7 text-text sm:text-base sm:leading-8">
                       <p>
                         Le Centre Regional des Metiers de l'Education et de la Formation (CRMEF) de Marrakech-Safi est situe a <span className="font-semibold text-primary-light">Arset Sinko, Boulevard Al Mouzdalifa, Marrakech 40000</span>.
                       </p>
@@ -920,7 +926,7 @@ export default function HomePage() {
                 </motion.div>
 
                 <motion.div className="relative" variants={itemVariants}>
-                  <div className="relative overflow-hidden rounded-3xl border-2 border-primary-light/30 shadow-lg h-96">
+                  <div className="relative h-64 overflow-hidden rounded-2xl border-2 border-primary-light/30 shadow-lg sm:h-80 sm:rounded-3xl lg:h-96">
                     <motion.div
                       key={carouselIndex}
                       initial={{ opacity: 0 }}
@@ -976,7 +982,7 @@ export default function HomePage() {
 
         
           </motion.section>
-          <motion.section id="modules" className="section-shell container mx-auto   p-8  "
+          <motion.section id="modules" className="section-shell portfolio-container overflow-hidden"
           style={{
           backgroundImage: `linear-gradient(rgba(248,250,252,0.94), rgba(255,255,255,0.47)), url(${bg4})`,
           backgroundSize: 'contain',
@@ -986,13 +992,13 @@ export default function HomePage() {
         }}
           initial="hidden" whileInView="visible" viewport={{ once: true }} variants={containerVariants}
           >
-              <motion.div className="mb-6 flex flex-wrap gap-3 p-2 prtfolio-container pointer-events-auto" variants={containerVariants}>
+              <motion.div className="mb-6 flex flex-col gap-3 pointer-events-auto sm:flex-row sm:flex-wrap sm:items-center" variants={containerVariants}>
           {semesterTabs.map((tab) => (
             <motion.button
               key={tab.id}
               type="button"
               onClick={() => setActiveTab(tab.id)}
-              className={`rounded-[12px] px-5 py-3 text-sm font-semibold transition pointer-events-auto cursor-pointer ${activeTab === tab.id ? 'bg-gradient1 text-white shadow-md' : 'text-text-light hover:bg-white'}`}
+              className={`w-full rounded-[12px] px-5 py-3 text-sm font-semibold transition pointer-events-auto cursor-pointer sm:w-auto ${activeTab === tab.id ? 'bg-gradient1 text-white shadow-md' : 'text-text-light hover:bg-white'}`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               variants={itemVariants}
@@ -1043,7 +1049,7 @@ export default function HomePage() {
 
 
 {/* msp */}
-      <motion.section id="msp" className="section-shell  container mx-auto my-12 p-8 " 
+      <motion.section id="msp" className="section-shell portfolio-container my-8 overflow-hidden sm:my-12" 
       initial="hidden" whileInView="visible" viewport={{ once: true }} variants={sectionVariants}
       style={{
                 backgroundImage: `linear-gradient(rgba(255,255,255,0.47), rgba(248,250,252,0.94)), url(${bg4})`,
@@ -1065,12 +1071,12 @@ export default function HomePage() {
             {/* Background Decoration */}
             <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-primary-light/10 blur-3xl transition-all group-hover:bg-primary-light/20" />
             
-            <div className="bg-gradient-to-br from-primary-dark via-primary-light to-primary-light p-8 text-black sm:p-10">
+            <div className="bg-gradient-to-br from-primary-dark via-primary-light to-primary-light p-5 text-black sm:p-8 lg:p-10">
               <div className="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-[10px] font-bold uppercase tracking-widest backdrop-blur-md">
                 <FiBookOpen size={14} />
                 Stage pratique
               </div>
-              <h2 className="mt-6 text-3xl font-extrabold tracking-tight sm:text-4xl">
+              <h2 className="mt-6 text-2xl font-extrabold tracking-tight sm:text-4xl">
                 Mise en Situation <br /> Professionnelle
               </h2>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-black">
@@ -1079,7 +1085,7 @@ export default function HomePage() {
             </div>
 
             {/* Stats Quick View */}
-            <div className="grid gap-4 p-8 sm:grid-cols-3">
+            <div className="grid gap-4 p-5 sm:grid-cols-3 sm:p-8">
               {[
                 { label: 'Période', value: 'Fév - Juin 2026', icon: FiCalendar },
                 { label: 'Année scolaire', value: '2025-2026', icon: FiBookOpen },
@@ -1099,7 +1105,7 @@ export default function HomePage() {
           </motion.article>
 
           {/* SIDE CARD: Detailed Info */}
-          <motion.aside className="lg:col-span-5 rounded-3xl border border-border bg-white p-8 shadow-sm transition-all hover:shadow-md" variants={itemVariants}>
+          <motion.aside className="rounded-3xl border border-border bg-white p-5 shadow-sm transition-all hover:shadow-md sm:p-8 lg:col-span-5" variants={itemVariants}>
             <div className="flex items-center gap-3 mb-6">
               <div className="h-8 w-1 bg-primary-light rounded-full" />
               <h3 className="text-xl font-bold text-dark">Détails du stage</h3>
@@ -1127,8 +1133,8 @@ export default function HomePage() {
 
         {/* RESOURCES SECTION: Modern Grid */}
         <motion.div className="mt-12" variants={containerVariants}>
-          <div className="flex items-center justify-between mb-6 px-2">
-            <h3 className="text-xl font-bold text-dark flex items-center gap-2">
+          <div className="mb-6 flex flex-col items-start gap-3 px-2 sm:flex-row sm:items-center sm:justify-between">
+            <h3 className="flex items-center gap-2 text-lg font-bold text-dark sm:text-xl">
               <FiCheckCircle className="text-primary-light" />
               Ressources MSP
             </h3>
@@ -1149,11 +1155,11 @@ export default function HomePage() {
                   className="group relative flex items-center justify-between rounded-2xl border border-border bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary-light hover:shadow-lg hover:shadow-primary-light/10"
                   variants={itemVariants}
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex min-w-0 items-center gap-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-bg text-primary-light transition-colors group-hover:bg-primary-light group-hover:text-white">
                       <ResourceIcon size={20} />
                     </div>
-                    <span className="text-sm font-semibold text-dark group-hover:text-primary-dark transition-colors">
+                    <span className="min-w-0 text-sm font-semibold text-dark transition-colors group-hover:text-primary-dark">
                       {resource.label}
                     </span>
                   </div>
@@ -1213,7 +1219,7 @@ export default function HomePage() {
                   pour proposer des recommandations sur les domaines numériques, les métiers et les formations possibles.
                 </p>
 
-                <div className="mt-7 grid gap-4 sm:grid-cols-3">
+                <div className="mt-7 grid gap-4 md:grid-cols-3">
                   {ppePillars.map((pillar) => {
                     const Icon = pillar.icon;
                     return (
@@ -1251,25 +1257,25 @@ export default function HomePage() {
             </motion.article>
 
             <motion.aside className="overflow-hidden rounded-3xl border border-blue-100 bg-white shadow-sm" variants={itemVariants}>
-              <div className="relative h-[280px] overflow-hidden bg-slate-950 sm:h-[340px]">
+              <div className="relative h-[240px] overflow-hidden bg-slate-950 sm:h-[320px] lg:h-[340px]">
                 <img
                   src={activePpeSlide.image}
                   alt={activePpeSlide.title}
                   className={`h-full w-full transition duration-500 ${
-                    activePpeSlide.imageMode === 'contain' ? 'bg-white object-contain p-8' : 'object-cover'
+                    activePpeSlide.imageMode === 'contain' ? 'bg-white object-contain p-4 sm:p-8' : 'object-cover'
                   }`}
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 via-slate-950/35 to-transparent p-5 text-white">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 via-slate-950/35 to-transparent p-4 text-white sm:p-5">
                   <span className="inline-flex rounded-full bg-white/15 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] backdrop-blur">
                     {activePpeSlide.badge}
                   </span>
-                  <h3 className="mt-3 text-xl font-extrabold leading-tight sm:text-2xl">{activePpeSlide.title}</h3>
+                  <h3 className="mt-3 text-lg font-extrabold leading-tight sm:text-2xl">{activePpeSlide.title}</h3>
                 </div>
 
                 <button
                   type="button"
                   onClick={handlePpePrev}
-                  className="absolute left-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-white/80 text-primary-light shadow-sm backdrop-blur transition hover:bg-white"
+                  className="absolute left-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-white/80 text-primary-light shadow-sm backdrop-blur transition hover:bg-white sm:left-4 sm:h-10 sm:w-10"
                   aria-label="Slide précédent PPE"
                 >
                   <FiArrowLeft size={18} aria-hidden="true" />
@@ -1277,14 +1283,14 @@ export default function HomePage() {
                 <button
                   type="button"
                   onClick={handlePpeNext}
-                  className="absolute right-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-white/80 text-primary-light shadow-sm backdrop-blur transition hover:bg-white"
+                  className="absolute right-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-white/80 text-primary-light shadow-sm backdrop-blur transition hover:bg-white sm:right-4 sm:h-10 sm:w-10"
                   aria-label="Slide suivant PPE"
                 >
                   <FiArrowRight size={18} aria-hidden="true" />
                 </button>
               </div>
 
-              <div className="p-6 sm:p-7">
+              <div className="p-5 sm:p-7">
                 <p className="text-sm leading-7 text-text">{activePpeSlide.description}</p>
                 <div className="mt-5 grid gap-2">
                   {activePpeSlide.points.map((point) => (
@@ -1363,7 +1369,7 @@ export default function HomePage() {
               />
 
               <motion.section className="grid gap-8 lg:grid-cols-[1fr_1fr]" variants={containerVariants}>
-                <motion.article className="soft-card p-6 sm:p-8" variants={itemVariants}>
+                <motion.article className="soft-card p-5 sm:p-8" variants={itemVariants}>
                   <h2 className="text-xl font-bold text-dark">Coordonnées</h2>
                   <div className="mt-5 space-y-3">
                     {contactDetails.map((detail) => {
@@ -1376,21 +1382,21 @@ export default function HomePage() {
                           rel={detail.href.startsWith('mailto:') || detail.href.startsWith('http') ? 'noreferrer' : undefined}
                           className="flex items-start justify-between gap-4 rounded-[12px] border border-border bg-white px-4 py-3 text-sm text-text transition hover:border-primary-light hover:text-primary-light"
                         >
-                          <span className="flex items-start gap-3">
+                          <span className="flex min-w-0 items-start gap-3">
                             <Icon size={16} className="mt-0.5" />
-                            <span>
+                            <span className="min-w-0">
                               <span className="block text-xs font-semibold uppercase tracking-[0.14em] text-text-light">{detail.label}</span>
-                              <span className="mt-1 block font-medium text-dark">{detail.value}</span>
+                              <span className="mt-1 block break-words font-medium text-dark">{detail.value}</span>
                             </span>
                           </span>
-                          <FiArrowUpRight size={16} />
+                          <FiArrowUpRight size={16} className="shrink-0" />
                         </a>
                       );
                     })}
                   </div>
                 </motion.article>
 
-                <motion.aside className="soft-card p-6 sm:p-8" variants={itemVariants}>
+                <motion.aside className="soft-card p-5 sm:p-8" variants={itemVariants}>
                   <h2 className="text-xl font-bold text-dark">Message Rapide</h2>
                   <p className="mt-2 text-sm leading-7 text-text-light">
                     Pour un premier contact rapide, utilisez l&apos;email ou WhatsApp. Vous pouvez aussi suivre mes contenus sur les réseaux professionnels.
@@ -1449,20 +1455,20 @@ export default function HomePage() {
             {administrativeDocuments.map((category) => {
               const Icon = category.icon;
               return (
-                <motion.div key={category.category} className="rounded-3xl overflow-hidden border border-border bg-white shadow-sm" variants={itemVariants}>
+                <motion.div key={category.category} className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm sm:rounded-3xl" variants={itemVariants}>
                   {/* Header de catégorie */}
-                  <div className={`${category.accent} flex items-center gap-4 px-6 py-5`}>
+                  <div className={`${category.accent} flex items-center gap-4 px-4 py-5 sm:px-6`}>
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/30">
                       <Icon size={24} />
                     </div>
-                    <div>
-                      <h3 className="text-base font-bold text-dark">{category.category}</h3>
+                    <div className="min-w-0">
+                      <h3 className="break-words text-sm font-bold text-dark sm:text-base">{category.category}</h3>
                       <p className="text-xs text-text-light mt-0.5">{category.docs.length} documents</p>
                     </div>
                   </div>
 
                   {/* Grille de documents */}
-                  <motion.div className="p-6" variants={containerVariants}>
+                  <motion.div className="p-4 sm:p-6" variants={containerVariants}>
                     <motion.div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3" variants={containerVariants}>
                       {category.docs.map((doc, idx) => (
                         <motion.a
@@ -1529,19 +1535,19 @@ export default function HomePage() {
                 href={getPedagogicalDocLink(doc)}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex items-center justify-between rounded-2xl border border-border bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary-light hover:shadow-md"
+                className="group flex items-center justify-between gap-3 rounded-2xl border border-border bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary-light hover:shadow-md"
                 variants={itemVariants}
               >
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 items-center gap-3">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-bg text-primary-light transition-colors group-hover:bg-primary-light group-hover:text-white">
                     <FiBookOpen size={18} />
                   </div>
-                  <div>
-                    <p className="text-sm font-semibold text-dark">{doc}</p>
+                  <div className="min-w-0">
+                    <p className="break-words text-sm font-semibold text-dark">{doc}</p>
                     <p className="text-xs text-text-light">Document {index + 1}</p>
                   </div>
                 </div>
-                <FiArrowRight size={16} className="text-text-light transition-all group-hover:translate-x-1 group-hover:text-primary-light" />
+                <FiArrowRight size={16} className="shrink-0 text-text-light transition-all group-hover:translate-x-1 group-hover:text-primary-light" />
               </motion.a>
             ))}
           </motion.div>

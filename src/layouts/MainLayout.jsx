@@ -13,7 +13,7 @@ export default function MainLayout() {
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
-        const headerOffset = 86;
+        const headerOffset = window.innerWidth >= 1280 ? 86 : window.innerWidth >= 640 ? 80 : 72;
         const targetY = targetElement.getBoundingClientRect().top + window.scrollY - headerOffset;
         window.scrollTo({ top: targetY, behavior: 'smooth' });
         return;
@@ -26,7 +26,7 @@ export default function MainLayout() {
   return (
     <div className="min-h-screen bg-bg text-text">
       <Header />
-      <div className="pt-[78px]">
+      <div className="pt-16 sm:pt-[72px] xl:pt-[78px]">
         <Outlet />
       </div>
       <Footer />

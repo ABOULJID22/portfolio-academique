@@ -693,7 +693,7 @@ export default function HomePage() {
                     </p>
                     <div className="mt-5 space-y-3">
                       <a
-                        href={profileLinks.cv.href}
+                       href="./src/data/cv/CV_Dec2025_Mohamed_Abouljid.pdf"
                         download
                         className="flex items-center justify-between rounded-[12px] border border-border bg-bg px-4 py-3 text-sm font-medium text-text transition hover:border-primary-light hover:text-primary-light"
                       >

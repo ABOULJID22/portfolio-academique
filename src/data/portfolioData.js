@@ -188,7 +188,7 @@ const rawModulePages = [
     summary: "Approches et méthodes pour enseigner efficacement l'informatique au collège.",
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -203,7 +203,7 @@ const rawModulePages = [
     summary: 'Fondements pédagogiques et psychologiques appliqués au contexte scolaire.',
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -218,7 +218,7 @@ const rawModulePages = [
     summary: 'Planification annuelle, séquentielle et journalière des apprentissages.',
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -233,7 +233,7 @@ const rawModulePages = [
     summary: 'Gestion de classe, du temps et des interactions pédagogiques.',
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -248,7 +248,7 @@ const rawModulePages = [
     summary: 'Concepts, exercices et stratégies d’apprentissage en algorithmique et code.',
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -263,7 +263,7 @@ const rawModulePages = [
     summary: "Notions d'architecture matérielle et fonctionnement interne des systèmes.",
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -278,7 +278,7 @@ const rawModulePages = [
     summary: 'Méthodes de recherche, collecte et structuration des sources académiques.',
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -293,7 +293,7 @@ const rawModulePages = [
     summary: "Intégration des TICE dans les apprentissages et la conception d'activités.",
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -308,7 +308,7 @@ const rawModulePages = [
     summary: 'Approfondissement des pratiques de gestion pédagogique et administrative.',
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -323,7 +323,7 @@ const rawModulePages = [
     summary: 'Conception d’évaluations, grilles et stratégies de remédiation.',
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -338,7 +338,7 @@ const rawModulePages = [
     summary: 'Production de ressources, fiches et contenus didactiques numériques.',
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -353,7 +353,7 @@ const rawModulePages = [
     summary: 'Observation et analyse critique des pratiques en contexte réel de classe.',
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -368,7 +368,7 @@ const rawModulePages = [
     summary: 'Fondements du web, HTML, CSS, JavaScript et création de pages interactives dans un cadre pédagogique.',
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -383,7 +383,7 @@ const rawModulePages = [
     summary: 'Réseaux informatiques, protocoles essentiels et usages pédagogiques.',
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -398,7 +398,7 @@ const rawModulePages = [
     summary: 'Éthique du numérique, responsabilité et citoyenneté digitale.',
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },
@@ -413,7 +413,7 @@ const rawModulePages = [
     summary: 'Cadre institutionnel, climat scolaire et collaboration éducative.',
     resources: [
       { label: 'Résumé du module', icon: FiFileText, href: DRIVE_FOLDER_URL },
-      { label: 'Cours && TD', icon: FiDownload, href: DRIVE_FOLDER_URL },
+      { label: 'Cours && TD && Activites', icon: FiDownload, href: DRIVE_FOLDER_URL },
       { label: 'Syllabus', icon: FiFolder, href: DRIVE_FOLDER_URL },
     ],
   },

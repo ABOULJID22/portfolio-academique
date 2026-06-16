@@ -584,9 +584,9 @@ export default function HomePage() {
                       informatiques de façon active et innovante. */}
                        Professeur en informatique, développeur Full Stack et physicien,
                  je combine rigueur scientifique, compétences techniques et passion pour 
-                 l’enseignement. Mon parcours allie une solide formation en 
-                 génie informatique et une passion pour la transmission du
-                  savoir numérique. Je conçois des solutions web performantes et sécurisées, tout 
+                 l’enseignement. Mon parcours allie une solide formation en génie informatique et en physique, ainsi qu'une passion pour 
+                      la transmission du savoir numérique.
+                  Je conçois des solutions web performantes et sécurisées, tout 
                   en accompagnant les apprenants dans le développement de leurs compétences numériques
                    de manière active et innovante.
                     </p>

@@ -112,3 +112,17 @@ npm run preview
 - GitHub Pages avec workflows personnalises : https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
 - Deploiement Vite sur GitHub Pages : https://vite.dev/guide/static-deploy.html#github-pages
 - `BrowserRouter` et `basename` : https://reactrouter.com/api/declarative-routers/BrowserRouter
+
+<!-- Ouvre :
+https://github.com/ABOULJID22/portfolio-academique/settings/pages
+
+Dans Build and deployment :
+Source : choisis GitHub Actions
+
+Retourne ici :
+https://github.com/ABOULJID22/portfolio-academique/actions/runs/27508319927
+
+Clique Re-run failed jobs.
+
+Après ça, le lien devrait fonctionner :
+https://abouljid22.github.io/portfolio-academique/pr-abouljidmohamed/ -->

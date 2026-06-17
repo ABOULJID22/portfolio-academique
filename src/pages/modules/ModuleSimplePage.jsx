@@ -18,7 +18,7 @@ export default function ModuleSimplePage({ module }) {
             {/* ── En-tête ── */}
             <div className="rounded-[16px] border border-border bg-bg p-6 sm:p-8">
               <div className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
-                CRMEF Marrakech Safi · 2025-2026
+                CRMEF Marrakech · 2025-2026
               </div>
               <h1 className="mt-2 text-2xl font-extrabold text-dark sm:text-3xl">{module?.title ?? 'Module'}</h1>
               <p className="mt-3 text-sm leading-7 text-text">

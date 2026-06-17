@@ -24,7 +24,7 @@ export default function S2EthiquesPage() {
           <article className="lg:col-span-2">
             <div className="rounded-[16px] border border-border bg-bg p-6 sm:p-8">
           <div className="text-xs font-bold uppercase tracking-[0.16em] text-accent text-right">
-            المراكز الجهوية لمهن التربية والتكوين · 2024-2025
+            المراكز الجهوية لمهن التربية والتكوين · 2025-2026
           </div>
           <h1 className="mt-2 text-2xl font-extrabold text-dark sm:text-3xl text-right">
             التشريع المدرسي وأخلاقيات المهنة

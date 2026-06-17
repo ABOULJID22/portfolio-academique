@@ -174,7 +174,7 @@ export default function TechnologiesEtDeveloppementwebPage() {
           <article className="lg:col-span-2">
             <div className="rounded-[18px] border border-border bg-bg p-6 sm:p-8">
               <div className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
-                CRMEF Marrakech Safi · Informatique · S2
+                CRMEF Marrakech · Informatique · S2
               </div>
               <h1 className="mt-2 text-2xl font-extrabold text-dark sm:text-3xl">
                 {module?.title ?? 'Technologies et Développement Web'}

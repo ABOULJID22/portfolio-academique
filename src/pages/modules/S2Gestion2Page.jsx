@@ -24,14 +24,12 @@ export default function S2Gestion2Page() {
           <article className="lg:col-span-2">
             <div className="rounded-[16px] border border-border bg-bg p-6 sm:p-8">
           <div className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
-            CRMEF · Gestion (2) — Module Complet · 2024-2025
+           CRMEF Marrakech · Gestion 2 · 2025-2026
           </div>
           <h1 className="mt-2 text-2xl font-extrabold text-dark sm:text-3xl">
             Gestion de Classe
           </h1>
-          <p className="mt-3 text-sm leading-7 text-text">
-            Fiche de synthèse détaillée · <span className="font-semibold">Pr. ATOUBI El Mostafa</span>
-          </p>
+      
           <div className="mt-4 flex flex-wrap gap-2">
             {[
               "Définition & Composantes",

@@ -187,7 +187,7 @@ const ppeSlides = [
     title: 'Une plateforme web simple et lisible',
     description: "Le projet met l'accent sur une expérience rassurante : comprendre son profil, explorer les pistes possibles et préparer son parcours.",
     image: orientation1,
-    imageMode: 'cover',
+    imageMode: 'coverf',
     points: ['Interface pédagogique', 'Parcours guidé', 'Orientation scolaire'],
   },
 ];

@@ -36,7 +36,7 @@ export default function S2ReseauxInternetPage() {
           <article className="lg:col-span-2">
             <div className="rounded-[16px] border border-border bg-bg p-6 sm:p-8">
           <div className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
-            CRMEF · Introduction aux Réseaux Informatiques · 2024-2025
+            CRMEF Marrakech · Introduction aux Réseaux Informatiques · 2025-2026
           </div>
           <h1 className="mt-2 text-2xl font-extrabold text-dark sm:text-3xl">
             🖧 Introduction aux Réseaux

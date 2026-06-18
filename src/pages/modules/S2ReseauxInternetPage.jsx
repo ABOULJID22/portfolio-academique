@@ -16,6 +16,307 @@ import Image_reseau9 from '../../data/images/reseaux/Image_reseau9.png';
 
 const slug = 's2-reseaux-internet';
 
+const reseauxSummaryCards = [
+  {
+    title: '1. Modèle OSI',
+    items: [
+      'Le réseau est organisé en couches pour séparer les rôles.',
+      'Couche physique : transmission des bits sous forme de signaux.',
+      'Couche liaison : trames, adresses physiques, contrôle d’erreur et de flux.',
+      'Couche réseau : paquets IP, routage, fragmentation, TTL, ICMP.',
+      'Encapsulation : Données → Segment → Paquet IP → Trame → Bits.',
+    ],
+  },
+  {
+    title: '2. Supports de transmission',
+    items: [
+      'Paire torsadée UTP : faible coût, facile à installer, sensible aux parasites.',
+      'Paire torsadée STP : blindée, meilleure protection contre les perturbations électromagnétiques.',
+      'Câble coaxial : meilleur affaiblissement que la paire torsadée, adapté à des fréquences plus élevées.',
+      'Fibre optique : signal lumineux, très grande capacité, faible taux d’erreur.',
+      'Sans fil : faisceaux hertziens, ondes radio, sensible aux obstacles et aux conditions météo.',
+    ],
+  },
+  {
+    title: '3. Signaux et transmission',
+    items: [
+      'Bande passante : plage de fréquences exploitables par le support.',
+      'Bruits et distorsions : perturbations qui dégradent le signal.',
+      'NRZ : un niveau de tension représente un bit pendant toute sa durée.',
+      'Manchester : codage fréquent dans Ethernet.',
+      'Modulation : modification de l’amplitude, de la fréquence ou de la phase d’un signal porteur.',
+    ],
+  },
+  {
+    title: '4. Formules importantes',
+    items: [
+      'Débit binaire : nombre de bits transmis par seconde.',
+      'Rapidité de modulation : nombre de symboles transmis par seconde, exprimée en bauds.',
+      'Relation : D = R × log₂(V).',
+      'Nyquist : Rmax = 2B.',
+      'Shannon : CapMax = B × log₂(1 + S/N).',
+    ],
+  },
+  {
+    title: '5. Couche liaison',
+    items: [
+      'La trame est l’unité de données de la couche liaison.',
+      'CRC : détection d’erreurs.',
+      'ACK : accusé de réception.',
+      'Contrôle de flux : éviter que l’émetteur envoie plus vite que le récepteur.',
+      'HDLC et PPP sont des protocoles de couche liaison.',
+    ],
+  },
+  {
+    title: '6. Couche réseau et routage',
+    items: [
+      'IPv4 est codée sur 32 bits.',
+      'Le masque sépare la partie réseau et la partie hôte.',
+      'ARP trouve l’adresse MAC correspondant à une adresse IP.',
+      'ICMP sert aux messages de contrôle, par exemple ping.',
+      'TTL évite les boucles infinies.',
+      'NAT/PAT permettent aux machines privées d’accéder à Internet via une IP publique.',
+    ],
+  },
+];
+
+const internetLayerSummaryCards = [
+  {
+    title: '1. Introduction à la couche Internet',
+    items: [
+      'La couche Internet utilise un adressage logique : l’adresse IP.',
+      'Une adresse IPv4 est composée de 32 bits, soit 4 octets.',
+      'Elle contient deux parties : Net-ID, qui identifie le réseau, et Host-ID, qui identifie la machine.',
+      'Exemple : 11000001 00011011 00101101 00100001 correspond à 193.27.45.33.',
+    ],
+  },
+  {
+    title: '2. Classes d’adresses IPv4',
+    items: [
+      'Classe A : réseau sur 7 bits, hôte sur 24 bits.',
+      'Classe B : réseau sur 14 bits, hôte sur 16 bits.',
+      'Classe C : réseau sur 21 bits, hôte sur 8 bits.',
+      'Classe D : réservée au multicast.',
+      'Classe E : réservée à une utilisation future.',
+      'Plages principales : A = 0 à 127, B = 128 à 191, C = 192 à 223, D = 224 à 239, E = 240 à 255.',
+    ],
+  },
+  {
+    title: '3. Adresses particulières',
+    items: [
+      '0.0.0.0 est utilisée lorsqu’une machine ne possède pas encore d’adresse IP.',
+      'L’adresse réseau est obtenue en mettant la partie machine à 0.',
+      'L’adresse de broadcast est obtenue en mettant la partie machine à 1.',
+      '127.0.0.1 à 127.255.255.254 sont des adresses de boucle locale, appelées loopback.',
+    ],
+  },
+  {
+    title: '4. Masque réseau et sous-réseaux',
+    items: [
+      'Le masque permet de séparer la partie réseau et la partie machine.',
+      'Exemples : Classe A = 255.0.0.0, Classe B = 255.255.0.0, Classe C = 255.255.255.0.',
+      'La notation CIDR indique le nombre de bits à 1 dans le masque : /24 signifie 24 bits pour le réseau.',
+      'Un sous-réseau permet de diviser un réseau en réseaux plus petits pour éviter le gaspillage d’adresses.',
+      'Pour connaître l’adresse de sous-réseau, on effectue un ET logique entre l’adresse IP et le masque.',
+    ],
+  },
+  {
+    title: '5. Adresses publiques, privées et NAT',
+    items: [
+      'Une adresse publique est unique mondialement et routable sur Internet.',
+      'Une adresse privée est utilisée seulement dans un réseau local et n’est pas connue directement sur Internet.',
+      'Le NAT traduit les adresses privées en adresses publiques.',
+      'Le NAT statique associe une adresse privée à une adresse publique fixe.',
+      'Le NAT dynamique permet de partager une adresse publique entre plusieurs machines privées selon le cours.',
+    ],
+  },
+  {
+    title: '6. Résolution d’adresse : ARP et RARP',
+    items: [
+      'ARP permet d’obtenir l’adresse physique MAC à partir d’une adresse IP.',
+      'RARP permet d’obtenir l’adresse IP à partir d’une adresse physique MAC.',
+      'Une requête ARP est envoyée en broadcast.',
+      'Une réponse ARP est envoyée en unicast.',
+      'Opération ARP = 1 pour une requête et 2 pour une réponse.',
+      'EtherType ARP = 0x0806 ; EtherType RARP = 0x8035.',
+    ],
+  },
+  {
+    title: '7. Datagramme IP',
+    items: [
+      'Un datagramme IP contient un en-tête de taille variable, multiple de 4 octets, et des données.',
+      'En Ethernet, le protocole IP utilise l’EtherType 0x0800.',
+      'Le champ VER indique la version : 4 pour IPv4 et 6 pour IPv6.',
+      'Le champ longueur totale est codé sur 16 bits et peut aller de 20 à 65 535 octets.',
+      'Le champ TTL limite la durée de vie du datagramme et diminue à chaque saut.',
+      'Le champ Protocole indique le protocole transporté : ICMP, TCP, UDP, etc.',
+      'Le checksum IP vérifie uniquement l’intégrité de l’en-tête.',
+    ],
+  },
+  {
+    title: '8. MTU, fragmentation et ICMP',
+    items: [
+      'Le MTU est la taille maximale de données transportables par un réseau physique.',
+      'Si un datagramme dépasse le MTU, IP peut le fragmenter.',
+      'Chaque fragment est un datagramme indépendant et peut être fragmenté à nouveau.',
+      'Le champ Identification permet de reconnaître les fragments d’un même datagramme original.',
+      'Le flag D signifie Don’t Fragment ; le flag M signifie More Fragments.',
+      'ICMP sert à signaler des problèmes réseau et à tester l’accessibilité d’une machine, par exemple avec ping.',
+    ],
+  },
+];
+
+const internetFormulaTags = [
+  'IPv4 = 32 bits = 4 octets',
+  'Adresse réseau = IP ET Masque',
+  'Selon le cours : nombre de sous-réseaux = 2ⁿ - 2',
+  'Nombre d’hôtes utilisables = 2ʰ - 2',
+  'ARP : IP → MAC',
+  'RARP : MAC → IP',
+  'ARP = 0x0806',
+  'RARP = 0x8035',
+  'IP = 0x0800',
+  'TTL diminue à chaque routeur',
+];
+
+const linkLayerSummaryCards = [
+  {
+    title: '1. Rôle d’un protocole de liaison',
+    items: [
+      'La couche liaison rend plus fiable un circuit de données qui peut altérer les bits transmis.',
+      'Elle travaille avec des blocs binaires appelés trames.',
+      'Un protocole de liaison définit le format des trames, leur délimitation, les champs, le contrôle d’erreur, le contrôle de flux, les acquittements et les règles de dialogue.',
+      'Il précise aussi les actions à effectuer en cas d’erreur, de perte, de panne ou de rupture de liaison.',
+    ],
+  },
+  {
+    title: '2. Mise en forme des données',
+    items: [
+      'Une trame peut être délimitée par une séquence spéciale appelée fanion ou flag.',
+      'En HDLC, le fanion est l’octet 01111110.',
+      'Pour éviter de retrouver le fanion dans les données, on utilise le bit stuffing : après cinq bits 1 consécutifs, l’émetteur insère un 0.',
+      'Le récepteur supprime ce 0 ajouté afin de retrouver les données d’origine.',
+      'Une autre méthode de délimitation consiste à indiquer la longueur du champ de données dans un champ particulier.',
+    ],
+  },
+  {
+    title: '3. Contrôle de la validité de l’information',
+    items: [
+      'Le contrôle d’erreur vérifie si les données reçues sont valides.',
+      'VRC : contrôle de parité verticale ajouté à chaque caractère.',
+      'LRC : contrôle de parité longitudinale calculé sur les bits de même rang d’un ensemble de caractères.',
+      'CRC : contrôle polynomial très utilisé, efficace pour détecter des erreurs sur plusieurs bits.',
+      'Dans le CRC, l’émetteur calcule un reste avec un polynôme générateur G(x). Le récepteur vérifie que le reste de la division est nul.',
+    ],
+  },
+  {
+    title: '4. Modes d’exploitation d’une liaison',
+    items: [
+      'Simplex : transmission dans un seul sens.',
+      'Semi-duplex ou half-duplex : transmission dans les deux sens, mais pas en même temps.',
+      'Duplex intégral ou full-duplex : transmission simultanée dans les deux sens.',
+    ],
+  },
+  {
+    title: '5. Contrôle de flux',
+    items: [
+      'Le contrôle de flux évite qu’un émetteur envoie plus vite que le récepteur ne peut traiter ou stocker.',
+      'Sans contrôle de flux, la mémoire du récepteur peut saturer et des informations peuvent être perdues.',
+      'RR signifie Receiver Ready : le récepteur est prêt à recevoir.',
+      'RNR signifie Receiver Not Ready : le récepteur n’est pas prêt à recevoir.',
+      'RR et RNR sont des trames de supervision : elles ne transportent pas de données utilisateur.',
+    ],
+  },
+  {
+    title: '6. Acquittements et temporisateur',
+    items: [
+      'Un ACK confirme la bonne réception d’une trame.',
+      'À l’émission, un temporisateur est lancé pour attendre l’ACK.',
+      'Si l’ACK n’arrive pas avant l’expiration du temporisateur, la trame est retransmise.',
+      'Le nombre de retransmissions est limité ; au-delà, on considère une panne ou une rupture de liaison.',
+    ],
+  },
+  {
+    title: '7. Numérotation des trames',
+    items: [
+      'La numérotation permet de distinguer les trames successives et d’éviter les duplications.',
+      'N(S) désigne le numéro de la trame envoyée.',
+      'N(R) désigne le numéro utilisé pour acquitter les trames reçues.',
+      'Le piggy-backing consiste à placer un acquittement dans une trame d’information envoyée dans le sens opposé.',
+    ],
+  },
+  {
+    title: '8. Fenêtre glissante et rejets',
+    items: [
+      'La fenêtre glissante permet d’envoyer plusieurs trames sans attendre immédiatement chaque ACK.',
+      'n représente la taille de la fenêtre, c’est-à-dire le nombre maximum de trames envoyées sans acquittement.',
+      'La fenêtre glisse lorsqu’un ACK valide la première trame de la fenêtre.',
+      'Rejet total : on retransmet à partir de la trame perdue, les trames suivantes ne sont pas acquittées.',
+      'Rejet sélectif : on retransmet seulement la trame perdue ou non acquittée, ce qui est plus efficace.',
+    ],
+  },
+  {
+    title: '9. HDLC',
+    items: [
+      'HDLC signifie High level Data Link Control.',
+      'HDLC utilise une transmission en duplex intégral et le mécanisme de transparence par bit stuffing.',
+      'Une trame HDLC contient notamment : Flag, Address, Control, Information, FCS, Flag.',
+      'Le champ Address identifie une extrémité de la liaison.',
+      'Le champ Control indique le type de trame.',
+      'Le champ FCS sert au contrôle d’erreur par CRC.',
+      'Types de trames HDLC : I pour information, S pour supervision, U pour commandes non numérotées.',
+    ],
+  },
+  {
+    title: '10. Trames HDLC et PPP',
+    items: [
+      'Trame I : transporte les données utilisateur, contient N(S) et N(R).',
+      'Trame S : gère l’acquittement et le contrôle de flux. Exemples : RR, RNR, REJ.',
+      'Trame U : sert aux commandes de liaison. Exemples : SABM, DISC, UA, FRMR, DM.',
+      'PPP signifie Point to Point Protocol. C’est un protocole de liaison point à point utilisé dans Internet et considéré comme une version simplifiée de HDLC.',
+    ],
+  },
+];
+
+function SummaryCardSection({ eyebrow, title, badge, cards, children }) {
+  return (
+    <section className="soft-card p-6 sm:p-8">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
+            {eyebrow}
+          </p>
+          <h2 className="mt-2 text-xl font-extrabold text-dark">{title}</h2>
+        </div>
+        <span className="w-fit rounded-full border border-primary-light/30 bg-primary-light/5 px-3 py-1 text-xs font-semibold text-primary-light">
+          {badge}
+        </span>
+      </div>
+
+      <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {cards.map(({ title: cardTitle, items }) => (
+          <article
+            key={cardTitle}
+            className="flex h-full flex-col rounded-[12px] border border-border bg-bg p-4 text-sm text-text"
+          >
+            <h3 className="text-base font-bold text-dark">{cardTitle}</h3>
+            <ul className="mt-3 space-y-2 leading-6">
+              {items.map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className="mt-0.5 shrink-0 text-primary-light">▸</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+
+      {children}
+    </section>
+  );
+}
+
 export default function S2ReseauxInternetPage() {
   const module = modulePages.find((item) => item.slug === slug);
 
@@ -36,10 +337,10 @@ export default function S2ReseauxInternetPage() {
           <article className="lg:col-span-2">
             <div className="rounded-[16px] border border-border bg-bg p-6 sm:p-8">
           <div className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
-            CRMEF Marrakech · Introduction aux Réseaux Informatiques · 2025-2026
+            CRMEF Marrakech ·  Réseaux Informatiques · 2025-2026
           </div>
           <h1 className="mt-2 text-2xl font-extrabold text-dark sm:text-3xl">
-            🖧 Introduction aux Réseaux
+            🖧 Réseaux Informatiques
           </h1>
           <p className="mt-3 text-sm leading-7 text-text">
             Topologies · Classification · Modèle OSI · TCP/IP · Équipements
@@ -994,7 +1295,40 @@ export default function S2ReseauxInternetPage() {
             </div>
           </section>
 
-       
+          <SummaryCardSection
+            eyebrow="Résumé du modèle de réseaux"
+            title="Modèle OSI, transmission et routage"
+            badge="6 fiches essentielles"
+            cards={reseauxSummaryCards}
+          />
+
+          <SummaryCardSection
+            eyebrow="Résumé couche Internet"
+            title="Adressage IPv4, ARP/RARP et datagramme IP"
+            badge="8 fiches + formules"
+            cards={internetLayerSummaryCards}
+          >
+            <div className="mt-6 rounded-[12px] border border-border bg-bg p-4">
+              <h3 className="text-base font-bold text-dark">Formules et repères à mémoriser</h3>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {internetFormulaTags.map((formula) => (
+                  <span
+                    key={formula}
+                    className="rounded-full border border-primary-light/25 bg-white px-3 py-1.5 font-mono text-xs font-semibold text-primary-light"
+                  >
+                    {formula}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </SummaryCardSection>
+
+          <SummaryCardSection
+            eyebrow="Résumé couche liaison"
+            title="Trames, contrôle d’erreur, flux, HDLC et PPP"
+            badge="10 fiches essentielles"
+            cards={linkLayerSummaryCards}
+          />
 
         </div>
       </div>

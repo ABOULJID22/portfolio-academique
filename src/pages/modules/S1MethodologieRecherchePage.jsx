@@ -1,6 +1,94 @@
 ﻿import { modulePages } from '../../data/portfolioData';
 
+import researchHeroImage from '../../data/images/recherche-action/recherche-action-1.jpeg';
+import researchSheetImage from '../../data/images/recherche-action/recherche-action-2.jpeg';
+import researchMapImage from '../../data/images/recherche-action/recherche-action-3.jpeg';
+import researchMatrixImage from '../../data/images/recherche-action/recherche-action-4.jpeg';
+import researchStatsImage from '../../data/images/recherche-action/recherche-action-5.jpeg';
+import researchPlanImage from '../../data/images/recherche-action/recherche-action-6.jpeg';
+
 const slug = 's1-methodologie-recherche';
+
+const researchSummaryCards = [
+  {
+    label: "Sujet",
+    value:
+      "Défis de la vie en internat et foyer des élèves et leur lien avec la déviance et le décrochage scolaire.",
+  },
+  {
+    label: "Type de recherche",
+    value:
+      "Recherche-action / recherche-intervention à dominante qualitative, fondée sur l'observation participante et l'immersion.",
+  },
+  {
+    label: "Public concerné",
+    value:
+      "Résidents des internats et foyers des élèves, avec prise en compte des cadres éducatifs et administratifs.",
+  },
+  {
+    label: "Outils mobilisés",
+    value:
+      "Observation de terrain, entretiens, données administratives et analyse des situations vécues.",
+  },
+];
+
+const researchFindings = [
+  {
+    title: "Défis matériels",
+    text: "Surpeuplement, hygiène limitée, nutrition peu adaptée et sentiment d'inconfort quotidien.",
+    style: "border-amber-200 bg-amber-50 text-amber-700",
+  },
+  {
+    title: "Défis organisationnels",
+    text: "Temps libre mal encadré, zones peu surveillées et règles vécues comme uniquement punitives.",
+    style: "border-sky-200 bg-sky-50 text-sky-700",
+  },
+  {
+    title: "Défis sociaux",
+    text: "Brimades, violences, isolement des nouveaux et recherche d'appartenance à des groupes informels.",
+    style: "border-rose-200 bg-rose-50 text-rose-700",
+  },
+  {
+    title: "Défis éducatifs",
+    text: "Suivi scolaire insuffisant, baisse de motivation, absentéisme et risque de décrochage masqué.",
+    style: "border-emerald-200 bg-emerald-50 text-emerald-700",
+  },
+];
+
+const interventionPillars = [
+  "Suivi scolaire intégré",
+  "Animation culturelle et sportive",
+  "Accompagnement psychologique",
+  "Régulation sociale positive",
+];
+
+const researchGallery = [
+  {
+    src: researchSheetImage,
+    title: "Fiche synthétique",
+    text: "Vue globale du projet, du public visé, des outils de collecte et des indicateurs suivis.",
+  },
+  {
+    src: researchMapImage,
+    title: "Géographie de la déviance",
+    text: "Repérage des zones sensibles: portes fermées, coins sombres et dortoirs surpeuplés.",
+  },
+  {
+    src: researchMatrixImage,
+    title: "Matrice des défis",
+    text: "Lecture organisée des dimensions matérielles, organisationnelles, sociales et éducatives.",
+  },
+  {
+    src: researchStatsImage,
+    title: "Promesse et réalité",
+    text: "Mise en tension entre le rôle attendu de l'internat et les indicateurs de décrochage.",
+  },
+  {
+    src: researchPlanImage,
+    title: "Plan d'intervention",
+    text: "Quatre piliers opérationnels pour prévenir la déviance et renforcer la persévérance scolaire.",
+  },
+];
 
 export default function S1MethodologieRecherchePage() {
 
@@ -26,11 +114,11 @@ export default function S1MethodologieRecherchePage() {
                 CRMEF Marrakech · 2025-2026
               </div>
               <h1 className="mt-2 text-2xl font-extrabold text-dark sm:text-3xl">
-                {module?.title ?? 'Didactique de l\'informatique'}
+                {module?.title ?? 'Méthodologie de recherche'}
               </h1>
               <p className="mt-3 text-sm leading-7 text-text">
-                Livret complet et detaille du module, avec les concepts fondamentaux de didactique, d&apos;epistemologie,
-                de situations d&apos;apprentissage et de charge cognitive.
+                Page organisée en deux parties : une recherche-action réalisée dans le cadre du module, puis le
+                résumé du cours avec les notions essentielles de méthodologie de recherche.
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {[
@@ -71,6 +159,215 @@ export default function S1MethodologieRecherchePage() {
               ))}
             </div>
           </aside>
+        </section>
+
+        <section id="recherche-action" className="mb-8 overflow-hidden rounded-[16px] border border-border bg-white shadow-sm">
+          <div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="p-6 sm:p-8">
+              <div className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
+                Recherche-action réalisée
+              </div>
+              <h2 className="mt-2 text-2xl font-extrabold leading-tight text-dark sm:text-3xl">
+                Défis de la vie en internat et foyer des élèves
+              </h2>
+              <p className="mt-4 text-sm leading-7 text-text">
+                Cette recherche analyse comment les conditions d&apos;hébergement, d&apos;encadrement et de suivi
+                peuvent favoriser des comportements déviants ou un décrochage scolaire progressif. Elle propose
+                une intervention éducative réaliste pour transformer l&apos;internat en espace de protection,
+                d&apos;accompagnement et de réussite.
+              </p>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {["Recherche-intervention", "Observation participante", "Immersion de terrain", "Plan d'action"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full border border-primary-light/30 bg-primary-light/5 px-3 py-1 text-xs font-semibold text-primary-light"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                {[
+                  { k: "Réalisé par", v: "ABOULJED Mohamed · ELASRI Sabir · AIT TATA Saleh" },
+                  { k: "Encadré par", v: "Dr. BARIBI Soufiane" },
+                  { k: "Cadre", v: "Méthodologie de recherche · CRMEF Marrakech" },
+                ].map(({ k, v }) => (
+                  <div key={k} className="rounded-[12px] border border-border bg-bg px-4 py-3 text-sm">
+                    <p className="text-xs font-bold uppercase tracking-[0.08em] text-accent">{k}</p>
+                    <p className="mt-1 font-semibold leading-6 text-dark">{v}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <figure className="relative min-h-[260px] bg-bg">
+              <img
+                src={researchHeroImage}
+                alt="Illustration d'un élève arrivant à l'internat"
+                className=" h-full min-h-[260px] w-full object-cover"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <section className="mb-8 grid gap-6 lg:grid-cols-3">
+          <article className="soft-card p-6 sm:p-8 lg:col-span-2">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <div className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
+                  En bref
+                </div>
+                <h2 className="mt-2 text-xl font-extrabold text-dark">
+                  Synthèse professionnelle de la recherche
+                </h2>
+              </div>
+              <span className="text-sm font-semibold text-primary-light">Recherche-action</span>
+            </div>
+
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {researchSummaryCards.map(({ label, value }) => (
+                <div key={label} className="rounded-[12px] border border-border bg-bg p-4 text-sm">
+                  <p className="font-bold text-dark">{label}</p>
+                  <p className="mt-2 leading-6 text-text">{value}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 rounded-[12px] border border-primary-light/20 bg-primary-light/5 p-4 text-sm leading-7 text-text">
+              <p className="font-bold text-dark">Problématique centrale</p>
+              <p className="mt-2">
+                Dans quelle mesure les défis de la vie en internat et foyer des élèves, dans leurs dimensions
+                matérielles, organisationnelles, sociales et éducatives, contribuent-ils à l&apos;émergence de
+                comportements déviants et au décrochage scolaire chez les apprenants ?
+              </p>
+            </div>
+          </article>
+
+          <aside className="soft-card p-6 sm:p-8">
+            <h2 className="text-sm font-bold uppercase tracking-[0.08em] text-accent">
+              Objectifs clés
+            </h2>
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-text">
+              <li>Diagnostiquer la réalité quotidienne des internats et foyers.</li>
+              <li>Analyser les formes de déviance observées chez les résidents.</li>
+              <li>Comprendre le lien entre conditions d&apos;hébergement, absentéisme et décrochage.</li>
+              <li>Proposer un plan d&apos;intervention éducative applicable.</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section className="mb-8 soft-card p-6 sm:p-8">
+          <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+            <div>
+              <div className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
+                Diagnostic de terrain
+              </div>
+              <h2 className="mt-2 text-xl font-extrabold text-dark">
+                Constats principaux
+              </h2>
+              <p className="mt-3 text-sm leading-7 text-text">
+                Le diagnostic montre que l&apos;internat peut devenir un levier de réussite lorsqu&apos;il protège,
+                accompagne et structure la vie collective. À l&apos;inverse, l&apos;absence d&apos;encadrement intégré
+                transforme certains espaces en facteurs de stress, d&apos;isolement et de désengagement scolaire.
+              </p>
+
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {researchFindings.map(({ title, text, style }) => (
+                  <div key={title} className={`rounded-[12px] border p-4 text-sm ${style}`}>
+                    <p className="font-bold">{title}</p>
+                    <p className="mt-2 leading-6 text-text">{text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <figure className="overflow-hidden rounded-[14px] border border-border bg-bg">
+              <img
+                src={researchMatrixImage}
+                alt="Matrice des défis de la vie en internat"
+                className="h-full min-h-[280px] w-full object-contain"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <section className="mb-8 soft-card p-6 sm:p-8">
+          <div className="grid gap-6 lg:grid-cols-[1fr_0.9fr]">
+            <figure className="overflow-hidden rounded-[14px] border border-border bg-bg">
+              <img
+                src={researchPlanImage}
+                alt="Plan d'intervention en quatre piliers"
+                className="h-full min-h-[280px] w-full object-contain"
+              />
+            </figure>
+
+            <div>
+              <div className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
+                Intervention proposée
+              </div>
+              <h2 className="mt-2 text-xl font-extrabold text-dark">
+                Un plan d&apos;action en quatre piliers
+              </h2>
+              <p className="mt-3 text-sm leading-7 text-text">
+                La recherche recommande de dépasser la simple logique d&apos;hébergement pour installer un
+                dispositif éducatif continu, associant soutien scolaire, animation, médiation et participation
+                des élèves à la vie collective.
+              </p>
+
+              <div className="mt-5 grid gap-2">
+                {interventionPillars.map((pillar, index) => (
+                  <div key={pillar} className="flex items-center gap-3 rounded-[10px] border border-border bg-bg px-4 py-3 text-sm text-text">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-light/10 font-bold text-primary-light">
+                      {index + 1}
+                    </span>
+                    <span className="font-semibold text-dark">{pillar}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <div className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
+                Images de la recherche
+              </div>
+              <h2 className="mt-2 text-xl font-extrabold text-dark">
+                Supports visuels intégrés
+              </h2>
+            </div>
+            <p className="max-w-xl text-sm leading-6 text-text-light">
+              Les visuels résument la logique du projet : diagnostic, facteurs de risque et intervention.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {researchGallery.map(({ src, title, text }) => (
+              <article key={title} className="overflow-hidden rounded-[14px] border border-border bg-white shadow-sm">
+                <img src={src} alt={title} className="h-52 w-full bg-bg object-contain" />
+                <div className="p-4">
+                  <h3 className="text-base font-bold text-dark">{title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-text">{text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="resume-cours" className="mb-6 rounded-[16px] border border-border bg-bg p-6 sm:p-8">
+          <div className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
+            Résumé du cours
+          </div>
+          <h2 className="mt-2 text-2xl font-extrabold text-dark">
+            Notions essentielles de méthodologie de recherche
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-text">
+            Le cours existant est conservé ci-dessous : introduction à la recherche-action, problématique,
+            revue de littérature, hypothèses, collecte et analyse des données quantitatives et qualitatives.
+          </p>
         </section>
 
 

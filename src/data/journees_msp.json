@@ -1,0 +1,1076 @@
+{
+  "meta": {
+    "title": "Rapport de Mise en Situation Professionnelle (MSP)",
+    "schoolYear": "2025/2026",
+    "trainee": "Mohamed ABOULJID",
+    "supervisor": "Prof. Ouanaim Yassine",
+    "training": "Formation au CRMEF – Filière Informatique",
+    "hostInstitution": "Lycée Ibn Abbad – Marrakech",
+    "level": "Tronc commun scientifique, option français",
+    "classroom": "Salle Génie",
+    "totalDays": 10,
+    "mainThemes": [
+      "Découverte du milieu scolaire",
+      "Algorithmique",
+      "Programmation Python",
+      "Gestion de classe",
+      "Évaluation des élèves",
+      "Saisie des notes sur Massar",
+      "Orientation scolaire"
+    ]
+  },
+  "establishment": {
+    "name": "Lycée Ibn Abbad",
+    "city": "Marrakech",
+    "district": "Guéliz",
+    "address": "Avenue Ahmed Chaouki, quartier Guéliz, 40000 Marrakech",
+    "status": "Lycée public qualifiant – enseignement général",
+    "academy": "AREF Marrakech–Safi",
+    "provinceDirection": "Marrakech–Menara",
+    "creationYear": 1934,
+    "oldName": "Lycée Mangin",
+    "computerRoom": {
+      "name": "Salle Génie",
+      "studentComputers": 18,
+      "operatingSystems": [
+        "Windows 7",
+        "Windows 10"
+      ],
+      "teachingTools": [
+        "ordinateurs",
+        "tableau blanc",
+        "stylos marqueurs",
+        "livre scolaire"
+      ]
+    }
+  },
+  "days": [
+    {
+      "id": 1,
+      "date": "2026-02-06",
+      "displayDate": "06/02/2026",
+      "title": "Journée 1 – Découverte de l'environnement professionnel",
+      "shortTitle": "Découverte du lycée et introduction à l'algorithmique",
+      "lesson": "Introduction à l'algorithmique",
+      "duration": "2 heures (1h par groupe)",
+      "type": "observation",
+      "category": "Algorithmique",
+      "card": {
+        "icon": "School",
+        "color": "blue",
+        "badge": "Découverte"
+      },
+      "context": "Première journée de MSP au Lycée Ibn Abbad. Découverte du lycée, de l'organisation de la salle informatique « Salle Génie », du programme scolaire, du cahier de préparation et du cahier de textes utilisés par le professeur.",
+      "organization": [
+        "Découverte du milieu et de la salle informatique appelée « Salle Génie ».",
+        "Consultation du programme scolaire officiel, du cahier de préparation et du cahier de textes.",
+        "Observation des rituels de classe : installation, vérification du matériel et tenue des cahiers."
+      ],
+      "sessions": [
+        {
+          "number": 1,
+          "time": "15h30 – 16h30",
+          "group": "TCS option français – Groupe 4",
+          "theme": "Notion d'algorithme",
+          "method": "Expositive progressive avec démonstration",
+          "objective": "Découvrir le rôle, la définition et la structure de base d'un algorithme.",
+          "phases": [
+            {
+              "phase": "Mise en situation",
+              "teacher": "Introduction du rôle et des enjeux des algorithmes en informatique.",
+              "learners": "Écoute attentive et découverte de la nouvelle notion."
+            },
+            {
+              "phase": "Théorie",
+              "teacher": "Définition formelle d'un algorithme et de ses caractéristiques : clarté, précision, finitude.",
+              "learners": "Prise de notes et assimilation des concepts."
+            },
+            {
+              "phase": "Rituel de gestion",
+              "teacher": "Vérification de la présence et de la tenue des cahiers.",
+              "learners": "Présentation des cahiers."
+            },
+            {
+              "phase": "Modélisation",
+              "teacher": "Explication de la structure : Entête, Déclarations, Corps, Début/Fin.",
+              "learners": "Suivi de la modélisation au tableau et questions de clarification."
+            },
+            {
+              "phase": "Application",
+              "teacher": "Démonstration guidée : calculer la somme de deux nombres.",
+              "learners": "Participation à la résolution et copie de la correction."
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "time": "16h30 – 17h30",
+          "group": "TCS option français – Groupe 1",
+          "theme": "Notion d'algorithme",
+          "method": "Expositive",
+          "objective": "Consolider la définition et la structure algorithmique.",
+          "phases": [
+            {
+              "phase": "Rituels de début",
+              "teacher": "Appel des présences assuré par la stagiaire Hiba Barzok et supervision de l'installation.",
+              "learners": "Réponse à l'appel et installation en silence."
+            },
+            {
+              "phase": "Théorie",
+              "teacher": "Rappel du rôle, de la définition et des caractéristiques d'un algorithme.",
+              "learners": "Écoute et prise de notes."
+            },
+            {
+              "phase": "Modélisation",
+              "teacher": "Représentation structurée : Entête, Déclarations, Corps.",
+              "learners": "Suivi des explications au tableau."
+            },
+            {
+              "phase": "Application",
+              "teacher": "Exercice guidé sur la somme de deux nombres.",
+              "learners": "Participation et notation de l'exercice."
+            }
+          ]
+        }
+      ],
+      "tools": [
+        "Tableau",
+        "Cahiers des élèves",
+        "Programme officiel",
+        "Cahier de préparation",
+        "Cahier de textes"
+      ],
+      "teacherManagement": [
+        "Occupation de l'axe central bureau-tableau pour capter l'attention.",
+        "Explications progressives allant de l'abstrait vers le concret.",
+        "Utilisation du français avec vocabulaire technique adapté.",
+        "Objectifs déclarés clairement en début de séance.",
+        "Insistance sur la rigueur formelle de la présentation au tableau."
+      ],
+      "skillsDeveloped": [
+        "Comprendre la structuration logique d'une séance d'algorithmique.",
+        "Observer l'importance des rituels de classe.",
+        "Prendre conscience de la rigueur formelle en informatique.",
+        "Se familiariser avec les documents professionnels de l'enseignant."
+      ],
+      "conclusion": "L'approche expositive couplée à la démonstration est pertinente pour introduire les notions abstraites de l'algorithmique auprès d'élèves débutants.",
+      "tags": [
+        "algorithmique",
+        "observation",
+        "rituels",
+        "démonstration",
+        "gestion de classe"
+      ],
+      "sourcePages": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "id": 2,
+      "date": "2026-02-13",
+      "displayDate": "13/02/2026",
+      "title": "Journée 2 – Structures de contrôle",
+      "shortTitle": "Structures séquentielle et alternative",
+      "lesson": "Séquence 2 : Structures de contrôle",
+      "duration": "2 heures",
+      "type": "observation_participative",
+      "category": "Algorithmique",
+      "card": {
+        "icon": "GitBranch",
+        "color": "indigo",
+        "badge": "Résolution-problèmes"
+      },
+      "context": "Journée consacrée à l'introduction de la structure séquentielle et de la structure alternative à partir de situations-problèmes concrètes.",
+      "organization": [
+        "Groupe 4 : 7 garçons présents, appel effectué par le stagiaire, séparation des élèves bruyants.",
+        "Groupe 1 : groupe presque complet, ambiance plus calme et participative, vérification des cahiers par les stagiaires."
+      ],
+      "sessions": [
+        {
+          "number": 1,
+          "time": "15h30 – 16h30",
+          "group": "TCS option français – Groupe 4",
+          "theme": "Structures de contrôle",
+          "method": "Résolution-problèmes",
+          "objective": "Introduire la structure séquentielle et la structure alternative.",
+          "activities": [
+            "Présentation de situations-problèmes : carte de fidélité cinéma et calcul de moyenne avec mention.",
+            "Définition de la structure séquentielle avec un algorithme calculant somme et produit.",
+            "Définition de la structure Si/Alors/Sinon avec exemple pair/impair.",
+            "Exercice d'application sur les affectations et annonce d'une évaluation."
+          ]
+        },
+        {
+          "number": 2,
+          "time": "16h30 – 17h30",
+          "group": "TCS option français – Groupe 1",
+          "theme": "Structures de contrôle",
+          "method": "Résolution-problèmes",
+          "objective": "Consolider la structure séquentielle et introduire la structure alternative.",
+          "activities": [
+            "Situation-problème de la carte de fidélité cinéma.",
+            "Exemple d'algorithme calculant le carré d'un nombre.",
+            "Exemple pour déterminer si un nombre est positif ou négatif.",
+            "Vérification des cahiers par les stagiaires.",
+            "Exercice d'affectations et annonce du contrôle."
+          ]
+        }
+      ],
+      "tools": [
+        "Tableau",
+        "Cahiers des élèves",
+        "Situations-problèmes contextualisées"
+      ],
+      "teacherManagement": [
+        "Déplacement fluide entre le tableau et les rangs.",
+        "Questions ouvertes et progressives.",
+        "Reformulation et validation collective des réponses.",
+        "Gestion différenciée du comportement selon le groupe.",
+        "Encouragement de la participation sans accepter les réponses collectives désordonnées."
+      ],
+      "methodsObserved": [
+        {
+          "method": "Résolution-problèmes",
+          "interest": "Motivation des élèves par des situations proches du quotidien."
+        },
+        {
+          "method": "Progressivité",
+          "interest": "Passage du concret vers l'abstrait puis vers la pratique."
+        },
+        {
+          "method": "Gestion différenciée",
+          "interest": "Maintien d'un cadre de travail efficace selon la dynamique du groupe."
+        }
+      ],
+      "skillsDeveloped": [
+        "Réaliser l'appel et la vérification des cahiers.",
+        "Observer une progression pédagogique séquentielle puis alternative.",
+        "Adapter la gestion de classe selon le profil du groupe.",
+        "Analyser les stratégies de participation utilisées par l'enseignant."
+      ],
+      "tags": [
+        "structures de contrôle",
+        "séquentielle",
+        "alternative",
+        "résolution-problèmes",
+        "participation"
+      ],
+      "sourcePages": [
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "id": 3,
+      "date": "2026-02-20",
+      "displayDate": "20/02/2026",
+      "title": "Journée 3 – Devoir Surveillé N°1",
+      "shortTitle": "Évaluation d'algorithmique",
+      "lesson": "Évaluation : Devoir Surveillé N°1 (Algorithmique)",
+      "duration": "2 heures (1h par groupe)",
+      "type": "evaluation",
+      "category": "Évaluation",
+      "card": {
+        "icon": "ClipboardCheck",
+        "color": "emerald",
+        "badge": "Évaluation"
+      },
+      "context": "Journée consacrée à l'évaluation des acquis de base en algorithmique. Le stagiaire participe à la surveillance, au ramassage et à la correction d'un premier lot de copies.",
+      "organization": [
+        "Organisation de la salle pour espacer les élèves.",
+        "Surveillance du devoir et collecte des copies.",
+        "Correction simultanée de copies pendant la séance.",
+        "Échange professionnel avec un autre professeur d'informatique sur les critères de notation."
+      ],
+      "sessions": [
+        {
+          "number": 1,
+          "time": "15h30 – 17h30",
+          "group": "Groupe 4 puis Groupe 1",
+          "theme": "Devoir Surveillé N°1",
+          "method": "Évaluation sommative surveillée",
+          "objective": "Évaluer l'acquisition des concepts de base : types de données, affectations, entrées/sorties et rédaction d'un algorithme simple.",
+          "phases": [
+            {
+              "phase": "Mise en route",
+              "description": "Organisation de la classe, silence et retrait des cahiers."
+            },
+            {
+              "phase": "Distribution",
+              "description": "Distribution du sujet et explication rapide des consignes."
+            },
+            {
+              "phase": "Surveillance",
+              "description": "Respect des règles de l'examen et réponses aux questions de compréhension."
+            },
+            {
+              "phase": "Correction en parallèle",
+              "description": "Correction d'un premier lot de copies selon le barème."
+            },
+            {
+              "phase": "Clôture",
+              "description": "Ramassage des copies et sortie ordonnée des élèves."
+            }
+          ]
+        }
+      ],
+      "assessmentContent": [
+        {
+          "exercise": "Exercice 1",
+          "points": 15,
+          "skills": [
+            "Identifier les types de valeurs",
+            "Compléter une trace d'algorithme",
+            "Prédire les résultats avec Ecrire"
+          ]
+        },
+        {
+          "exercise": "Exercice 2",
+          "points": 5,
+          "skills": [
+            "Rédiger un algorithme simple",
+            "Saisir deux nombres",
+            "Calculer et afficher le produit"
+          ]
+        }
+      ],
+      "skillsDeveloped": [
+        "Observer la logistique d'un devoir : plan de classe, distribution, consignes de temps.",
+        "Maintenir un environnement calme et strict.",
+        "Corriger des copies réelles selon un barème.",
+        "Identifier des erreurs types, par exemple la confusion entre chaîne 'B' et variable B.",
+        "Échanger avec les enseignants sur l'objectivité de la notation."
+      ],
+      "conclusion": "La journée marque un passage du rôle d'observateur à celui d'évaluateur. Elle met en évidence la difficulté des élèves à relier affectations successives et rédaction formelle d'un algorithme.",
+      "tags": [
+        "devoir surveillé",
+        "algorithmique",
+        "barème",
+        "correction",
+        "surveillance"
+      ],
+      "sourcePages": [
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    {
+      "id": 4,
+      "date": "2026-02-26",
+      "displayDate": "26/02/2026",
+      "title": "Journée 4 – Introduction à Python",
+      "shortTitle": "Langage de programmation et passage au code",
+      "lesson": "Algorithmique / Langage de programmation",
+      "duration": "2 heures (1h par groupe)",
+      "type": "pratique_guidée",
+      "category": "Python",
+      "card": {
+        "icon": "Code2",
+        "color": "yellow",
+        "badge": "Python"
+      },
+      "context": "Journée consacrée à l'introduction de la notion de programme et de langage de programmation, avec passage progressif de l'algorithme vers Python. La journée inclut aussi la correction et la saisie des notes des évaluations précédentes.",
+      "sessions": [
+        {
+          "number": 1,
+          "time": "15h30 – 16h30",
+          "group": "Groupe 4",
+          "theme": "Découverte de la notion de programme et de langage de programmation",
+          "method": "Résolution de problème puis cours expositif et démonstration pratique",
+          "activities": [
+            "Situation-problème : calculer la moyenne d'un élève et décider s'il est admis.",
+            "Définition de programme informatique et de langage de programmation.",
+            "Explication des notions d'interpréteur et de compilateur.",
+            "Traduction du problème en suite d'instructions puis en programme.",
+            "Création d'un fichier Python, enregistrement et exécution de premières instructions."
+          ],
+          "traineeRole": [
+            "Correction des copies de l'évaluation précédente.",
+            "Saisie des notes avec les collègues après vérification."
+          ]
+        },
+        {
+          "number": 2,
+          "time": "16h30 – 17h30",
+          "group": "Groupe 1",
+          "theme": "Même leçon – langage de programmation Python",
+          "method": "Résolution de problème + cours expositif + pratique guidée",
+          "activities": [
+            "Reprise de la situation moyenne/admission.",
+            "Rappel des notions de programme, langage, interpréteur et compilateur.",
+            "Gestion du bruit et recentrage des élèves avant la pratique.",
+            "Création d'un fichier Python et écriture d'instructions simples.",
+            "Test de l'exécution du programme."
+          ]
+        }
+      ],
+      "methodsObserved": [
+        {
+          "method": "Résolution de problème",
+          "interest": "Donne du sens au besoin d'automatiser un traitement."
+        },
+        {
+          "method": "Cours expositif",
+          "interest": "Clarifie les notions abstraites : programme, langage, interpréteur, compilateur."
+        },
+        {
+          "method": "Démonstration pratique",
+          "interest": "Relie la théorie à l'outil Python concret."
+        },
+        {
+          "method": "Gestion de classe",
+          "interest": "Régulation du bruit et recentrage avant la pratique."
+        }
+      ],
+      "skillsDeveloped": [
+        "Corriger des copies et saisir rigoureusement les notes.",
+        "Observer la progression problème concret → notions théoriques → pratique Python.",
+        "Comprendre la gestion de classe en salle informatique.",
+        "Mieux comprendre la transition entre algorithmique et programmation."
+      ],
+      "tags": [
+        "Python",
+        "programme",
+        "interpréteur",
+        "compilateur",
+        "moyenne",
+        "Massar"
+      ],
+      "sourcePages": [
+        23,
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "id": 5,
+      "date": "2026-03-06",
+      "displayDate": "06/03/2026",
+      "title": "Journée 5 – Évaluation pratique Python",
+      "shortTitle": "Devoir pratique individuel sur ordinateur",
+      "lesson": "Évaluation pratique sur Python",
+      "duration": "2 heures (1h par groupe)",
+      "type": "evaluation_pratique",
+      "category": "Évaluation Python",
+      "card": {
+        "icon": "MonitorCheck",
+        "color": "green",
+        "badge": "TP évalué"
+      },
+      "context": "Évaluation pratique sur Python pour vérifier la maîtrise des notions de base : instructions simples, saisie, calcul, affichage et conditions.",
+      "sessions": [
+        {
+          "number": 1,
+          "time": "2 séances",
+          "group": "Groupe 4 et Groupe 1",
+          "theme": "Évaluation pratique Python",
+          "method": "Devoir pratique individuel sur ordinateur",
+          "objective": "Vérifier la capacité des élèves à écrire, exécuter et tester de petits programmes Python.",
+          "phases": [
+            {
+              "phase": "Mise en place",
+              "description": "Organisation des élèves en salle informatique et vérification des PC."
+            },
+            {
+              "phase": "Consignes",
+              "description": "Explication du contenu de l'évaluation pratique."
+            },
+            {
+              "phase": "Surveillance et aide",
+              "description": "Surveillance, résolution de problèmes techniques et clarification des consignes sans donner la solution."
+            },
+            {
+              "phase": "Notation",
+              "description": "Correction selon un barème : syntaxe, respect des consignes et résultats obtenus."
+            },
+            {
+              "phase": "Saisie des notes",
+              "description": "Saisie des notes sur Massar par les stagiaires avec vérification avant validation."
+            }
+          ]
+        }
+      ],
+      "pedagogicalObservations": [
+        "L'évaluation pratique vérifie le passage réel de l'algorithme au code Python.",
+        "Les problèmes techniques obligent à distinguer l'aide technique autorisée de l'aide sur le contenu non autorisée."
+      ],
+      "skillsDeveloped": [
+        "Gérer une classe en situation d'évaluation pratique.",
+        "Assurer une assistance technique en salle informatique.",
+        "Corriger des travaux pratiques et attribuer des notes selon un barème clair.",
+        "Comprendre l'importance de la fiabilité des notes saisies sur Massar."
+      ],
+      "tags": [
+        "évaluation pratique",
+        "Python",
+        "ordinateur",
+        "barème",
+        "Massar"
+      ],
+      "sourcePages": [
+        27,
+        28
+      ]
+    },
+    {
+      "id": 6,
+      "date": "2026-03-12",
+      "displayDate": "12/03/2026",
+      "title": "Journée 6 – Structure conditionnelle if/else",
+      "shortTitle": "Condition en Python et maintenance informatique",
+      "lesson": "Structure conditionnelle simple (if/else) en Python",
+      "duration": "2 heures (1h par groupe)",
+      "type": "cours_pratique",
+      "category": "Python",
+      "card": {
+        "icon": "Split",
+        "color": "purple",
+        "badge": "if/else"
+      },
+      "context": "Séance en salle informatique sur la structure conditionnelle simple if/else en Python. La première séance intègre une activité de maintenance informatique pour les stagiaires.",
+      "sessions": [
+        {
+          "number": 1,
+          "time": "15h30 – 16h30",
+          "group": "Groupe 4",
+          "theme": "Structure conditionnelle simple",
+          "method": "Résolution-problème + rappel algorithmique + cours Python + pratique",
+          "activities": [
+            "Situation-problème : calculer la moyenne de 3 notes et afficher Admis ou Ajourné.",
+            "Rappel de la structure Si/Sinon en algorithmique.",
+            "Maintenance de certains PC : connexion, redémarrage et résolution de petits problèmes.",
+            "Cours sur la syntaxe if/else en Python.",
+            "Exercice pratique : coder le programme de calcul de moyenne avec décision."
+          ]
+        },
+        {
+          "number": 2,
+          "time": "16h30 – 17h30",
+          "group": "Groupe 1",
+          "theme": "Structure conditionnelle simple",
+          "method": "Même contenu sans maintenance PC",
+          "activities": [
+            "Situation-problème moyenne de 3 notes.",
+            "Rappel du Si/Sinon algorithmique.",
+            "Explication de la syntaxe if/else.",
+            "Exercice pratique sur ordinateur avec accompagnement des stagiaires."
+          ]
+        }
+      ],
+      "methodsObserved": [
+        {
+          "method": "Résolution-problème",
+          "interest": "Donne du sens à la condition."
+        },
+        {
+          "method": "Rappel algorithmique",
+          "interest": "Assure une transition fluide vers Python."
+        },
+        {
+          "method": "Cours + pratique guidée",
+          "interest": "Favorise l'acquisition rapide par l'action."
+        },
+        {
+          "method": "Aide individualisée",
+          "interest": "Soutien différencié aux élèves en difficulté."
+        }
+      ],
+      "skillsDeveloped": [
+        "Tester et maintenir des PC pour assurer la continuité du cours.",
+        "Aider les élèves sur la syntaxe Python et la logique du programme.",
+        "Observer la gestion du bruit et de l'attention en salle informatique.",
+        "Comprendre le lien entre Si/Sinon algorithmique et if/else Python."
+      ],
+      "recommendations": [
+        "Prévoir plus d'exercices de débogage.",
+        "Diversifier les seuils dans les exercices pour éviter la confusion.",
+        "Préparer une fiche de suivi technique des PC problématiques.",
+        "Encourager le travail en binôme pendant la pratique."
+      ],
+      "tags": [
+        "if",
+        "else",
+        "Python",
+        "maintenance",
+        "débogage",
+        "moyenne"
+      ],
+      "sourcePages": [
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "id": 7,
+      "date": "2026-03-26",
+      "displayDate": "26/03/2026",
+      "title": "Journée 7 – Listes et chaînes de caractères",
+      "shortTitle": "Stagiaires en autonomie : listes et chaînes",
+      "lesson": "Listes et chaînes de caractères (Python)",
+      "duration": "2 heures (1h par groupe)",
+      "type": "autonomie_stagiaires",
+      "category": "Python",
+      "card": {
+        "icon": "Brackets",
+        "color": "pink",
+        "badge": "Autonomie"
+      },
+      "context": "Journée des stagiaires en autonomie : Pr. Maryam anime une séance sur les listes en Python et Pr. Hiba anime une séance sur les chaînes de caractères. Les autres stagiaires observent et accompagnent les élèves.",
+      "sessions": [
+        {
+          "number": 1,
+          "teacher": "Pr. Maryam",
+          "theme": "Listes en Python",
+          "method": "Résolution-problèmes + cours interactif + pratique",
+          "content": [
+            "création de liste",
+            "ajout",
+            "modification",
+            "accès aux éléments",
+            "append()"
+          ],
+          "strengths": [
+            "Situation-problème adaptée",
+            "Interaction réussie pour construire la définition"
+          ],
+          "difficulties": [
+            "Gestion du temps difficile",
+            "Exercices trop longs",
+            "Mobilité limitée en salle"
+          ],
+          "traineeRole": [
+            "Observation de la méthode",
+            "Aide individualisée",
+            "Signalement du problème de temps"
+          ]
+        },
+        {
+          "number": 2,
+          "teacher": "Pr. Hiba",
+          "theme": "Chaînes de caractères",
+          "method": "Résolution-problèmes + cours interactif dynamique",
+          "content": [
+            "affichage",
+            "concaténation",
+            "accès aux caractères",
+            "répétition",
+            "in",
+            "slicing"
+          ],
+          "strengths": [
+            "Très bonne dynamique",
+            "Participation active des élèves",
+            "Situation-problème pertinente",
+            "Cours complet"
+          ],
+          "difficulties": [
+            "Pas assez de temps pour l'exercice pratique",
+            "Mobilité limitée en salle"
+          ],
+          "traineeRole": [
+            "Observation",
+            "Appel des présences pendant la copie",
+            "Analyse critique de la séance"
+          ]
+        }
+      ],
+      "skillsDeveloped": [
+        "Accompagner les élèves en salle informatique.",
+        "Observer de manière critique une séance animée par des pairs.",
+        "Assumer une tâche de gestion de classe comme l'appel.",
+        "Comparer deux approches didactiques : plus théorique et plus interactive."
+      ],
+      "recommendations": [
+        "Améliorer la gestion du temps.",
+        "Réduire la longueur des exercices.",
+        "Circuler davantage en salle informatique.",
+        "Équilibrer théorie et pratique."
+      ],
+      "conclusion": "Première expérience d'autonomie réussie pour les stagiaires, avec une priorité à travailler : gestion du temps et mobilité.",
+      "tags": [
+        "listes",
+        "chaînes",
+        "Python",
+        "autonomie",
+        "observation critique",
+        "gestion du temps"
+      ],
+      "sourcePages": [
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "id": 8,
+      "date": "2026-04-16",
+      "displayDate": "16/04/2026",
+      "title": "Journée 8 – Fonctions de chaînes et Devoir N°3",
+      "shortTitle": "Évaluation pratique et traitement des chaînes",
+      "lesson": "Fonctions de traitement des chaînes en Python et évaluation pratique",
+      "duration": "2 heures (1h par groupe)",
+      "type": "evaluation_et_cours",
+      "category": "Python",
+      "card": {
+        "icon": "TextCursorInput",
+        "color": "orange",
+        "badge": "Chaînes"
+      },
+      "context": "Journée combinant une évaluation pratique sur ordinateur pour le Groupe 4 et une introduction aux fonctions de traitement des chaînes en Python pour le Groupe 1.",
+      "sessions": [
+        {
+          "number": 1,
+          "time": "15h30 – 16h30",
+          "group": "Groupe 4",
+          "theme": "Devoir Surveillé N°3 – Évaluation pratique sur ordinateur",
+          "method": "Évaluation sommative individuelle en salle informatique",
+          "activities": [
+            "Organisation de la salle et espacement des élèves.",
+            "Distribution du sujet et clarification des consignes.",
+            "Réalisation individuelle de programmes Python.",
+            "Surveillance, aide technique et gestion des problèmes de PC ou de fichiers.",
+            "Ramassage des fichiers ou copies."
+          ]
+        },
+        {
+          "number": 2,
+          "time": "16h30 – 17h30",
+          "group": "Groupe 1",
+          "theme": "Fonctions de traitement des chaînes de caractères",
+          "method": "Résolution-problème + cours expositif interactif + exemples",
+          "situationProblem": "Créer un formulaire de saisie du nom et prénom d'un utilisateur : vérifier et formater correctement les données saisies.",
+          "activities": [
+            "Discussion autour du problème du formulaire.",
+            "Présentation des fonctions de chaînes utiles.",
+            "Démonstration avec exemples dans la console Python.",
+            "Synthèse des fonctions vues."
+          ]
+        }
+      ],
+      "pythonFunctions": [
+        {
+          "function": ".upper()",
+          "role": "Convertir en majuscules",
+          "example": "\"ali\".upper() → \"ALI\""
+        },
+        {
+          "function": ".lower()",
+          "role": "Convertir en minuscules",
+          "example": "\"ALI\".lower() → \"ali\""
+        },
+        {
+          "function": ".capitalize()",
+          "role": "Mettre la première lettre en majuscule",
+          "example": "\"ali\".capitalize() → \"Ali\""
+        },
+        {
+          "function": ".isalpha()",
+          "role": "Vérifier si la valeur est alphabétique",
+          "example": "\"Ali\".isalpha() → True"
+        },
+        {
+          "function": ".isdigit()",
+          "role": "Vérifier si la valeur est numérique",
+          "example": "\"123\".isdigit() → True"
+        },
+        {
+          "function": ".strip()",
+          "role": "Supprimer les espaces inutiles",
+          "example": "\" Ali \".strip() → \"Ali\""
+        },
+        {
+          "function": "len()",
+          "role": "Mesurer la longueur d'une chaîne",
+          "example": "len(\"Ali\") → 3"
+        }
+      ],
+      "skillsDeveloped": [
+        "Surveiller une évaluation pratique.",
+        "Gérer le calme et les déplacements pendant le devoir.",
+        "Réexpliquer les consignes sans donner les réponses.",
+        "Analyser une progression situation-problème → fonctions → exemples appliqués."
+      ],
+      "recommendations": [
+        "Ajouter un mini-TP sur le traitement d'un nom saisi.",
+        "Préparer une fiche récapitulative des fonctions de chaînes.",
+        "Prévoir une correction collective du Devoir N°3."
+      ],
+      "tags": [
+        "chaînes",
+        "fonctions",
+        "upper",
+        "lower",
+        "isalpha",
+        "isdigit",
+        "Devoir N°3"
+      ],
+      "sourcePages": [
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "id": 9,
+      "date": "2026-04-23",
+      "displayDate": "23/04/2026",
+      "title": "Journée 9 – Orientation scolaire sur Massar",
+      "shortTitle": "Massar, orientation et rattrapage Devoir N°3",
+      "lesson": "Orientation scolaire via Massar et rattrapage du Devoir N°3",
+      "duration": "2 heures (1h par groupe)",
+      "type": "orientation_et_suivi",
+      "category": "Massar",
+      "card": {
+        "icon": "Navigation",
+        "color": "cyan",
+        "badge": "Massar"
+      },
+      "context": "Journée consacrée à l'orientation scolaire via la plateforme Massar. Les élèves expriment leurs choix pour l'année suivante. En parallèle, les élèves absents au Devoir N°3 effectuent un rattrapage.",
+      "sessions": [
+        {
+          "number": 1,
+          "time": "15h30 – 16h30",
+          "group": "Groupe 4",
+          "theme": "Orientation scolaire sur Massar + rattrapage",
+          "activities": [
+            "Installation des élèves en salle informatique.",
+            "Connexion à Massar/Moutamadris avec numéro Massar et @taalim.ma.",
+            "Exploration et sélection des parcours d'orientation.",
+            "Gestion autonome de la classe pendant l'absence temporaire du professeur.",
+            "Dictée et explication du devoir de rattrapage au tableau."
+          ]
+        },
+        {
+          "number": 2,
+          "time": "16h30 – 17h30",
+          "group": "Groupe 1",
+          "theme": "Orientation Massar + annonce Devoir N°4",
+          "activities": [
+            "Guidage pas à pas pour accéder à la plateforme.",
+            "Aide aux élèves pour la connexion, le choix de parcours et l'enregistrement.",
+            "Réponses aux questions des élèves hésitants.",
+            "Annonce du Devoir N°4 prévu le 30/04/2026."
+          ]
+        }
+      ],
+      "massarSteps": [
+        "Accéder à massarservice.men.gov.ma/moutamadris/Account.",
+        "Se connecter avec le numéro Massar suivi de @taalim.ma et le code secret.",
+        "Cliquer sur « التوجيه » (Orientation).",
+        "Cliquer sur « الاختيارات الدراسية والتكوينية » (Choix scolaires et formations).",
+        "Cliquer sur « إضافة » (Ajouter) pour chaque choix de parcours.",
+        "Classer les choix par ordre de préférence.",
+        "Cliquer sur « حفظ » (Enregistrer) pour valider."
+      ],
+      "educationalInterests": [
+        "Développer l'autonomie des élèves dans leur orientation scolaire.",
+        "Assurer l'équité en permettant aux absents de rattraper le devoir.",
+        "Préparer les élèves à la dernière évaluation de l'année."
+      ],
+      "skillsDeveloped": [
+        "Gérer la classe de manière autonome.",
+        "S'adapter à deux activités simultanées : orientation et rattrapage.",
+        "Communiquer des consignes claires au tableau et oralement.",
+        "Expliquer l'utilisation d'un outil institutionnel officiel."
+      ],
+      "recommendations": [
+        "Préparer une fiche guide Massar avec étapes et captures simplifiées.",
+        "Accompagner les élèves hésitants dans le choix des filières.",
+        "Désigner clairement un adulte responsable en cas d'absence temporaire.",
+        "Préparer le Devoir N°4 sur les notions vues : listes, chaînes, fonctions, if/else."
+      ],
+      "tags": [
+        "Massar",
+        "orientation",
+        "Moutamadris",
+        "rattrapage",
+        "autonomie",
+        "Devoir N°4"
+      ],
+      "sourcePages": [
+        40,
+        41,
+        42,
+        43
+      ]
+    },
+    {
+      "id": 10,
+      "date": "2026-04-30",
+      "displayDate": "30/04/2026",
+      "title": "Journée 10 – Devoir Surveillé N°4",
+      "shortTitle": "Évaluation finale et saisie immédiate sur Massar",
+      "lesson": "Devoir Surveillé N°4 – Évaluation finale",
+      "duration": "2 heures (1 seule séance de 2h)",
+      "type": "evaluation_finale",
+      "category": "Évaluation finale",
+      "card": {
+        "icon": "Award",
+        "color": "red",
+        "badge": "Final"
+      },
+      "context": "Dernière journée de MSP consacrée au Devoir Surveillé N°4, dernier devoir de l'année pour les élèves de Tronc commun. Les notes sont saisies directement sur Massar dès que chaque élève termine.",
+      "sessions": [
+        {
+          "number": 1,
+          "time": "2 heures",
+          "group": "Deux groupes",
+          "theme": "Évaluation sommative finale",
+          "method": "Surveillance, aide technique, correction en temps réel et saisie immédiate des notes sur Massar",
+          "phases": [
+            {
+              "phase": "Mise en place",
+              "professor": "Organisation de la salle et mise en route des PC.",
+              "students": "Installation et ouverture de l'environnement Python.",
+              "trainees": "Vérification du fonctionnement des postes."
+            },
+            {
+              "phase": "Distribution",
+              "professor": "Distribution du sujet et explication des consignes.",
+              "students": "Lecture des consignes et questions éventuelles.",
+              "trainees": "Observation et écoute des consignes."
+            },
+            {
+              "phase": "Surveillance",
+              "professor": "Supervision du déroulement.",
+              "students": "Réalisation individuelle de l'évaluation Python.",
+              "trainees": "Circulation, maintien du calme et gestion de l'espace."
+            },
+            {
+              "phase": "Aide technique",
+              "professor": "Réponses aux questions de compréhension.",
+              "students": "Questions sur l'énoncé.",
+              "trainees": "Clarification sans donner les réponses."
+            },
+            {
+              "phase": "Correction et saisie",
+              "professor": "Correction au fur et à mesure.",
+              "students": "Remise de la copie dès la fin.",
+              "trainees": "Saisie directe des notes sur Massar."
+            },
+            {
+              "phase": "Clôture",
+              "professor": "Ramassage des dernières copies.",
+              "students": "Sortie progressive.",
+              "trainees": "Vérification finale des notes saisies."
+            }
+          ]
+        }
+      ],
+      "massarGradeEntryProcedure": [
+        "Connexion à l'espace professeur sur massarservice.men.gov.ma via le compte de l'établissement.",
+        "Accès au menu « Saisie des notes CC » puis « Saisie des notes par élève ».",
+        "Sélection de la classe, de la matière Informatique et du Devoir N°4.",
+        "Saisie de la note de chaque élève dès la remise de la copie corrigée.",
+        "Validation et enregistrement de chaque note au fur et à mesure."
+      ],
+      "pedagogicalInterests": [
+        "Bilan complet des apprentissages de l'année en algorithmique et programmation Python.",
+        "Correction rapide grâce au traitement en temps réel.",
+        "Fiabilité et traçabilité des résultats grâce à la saisie immédiate sur Massar."
+      ],
+      "skillsDeveloped": [
+        "Gérer une évaluation sommative finale en salle informatique.",
+        "Saisir les notes sur Massar de manière fiable.",
+        "Travailler en équipe avec répartition des rôles.",
+        "Accompagner les élèves sans rompre la neutralité évaluative."
+      ],
+      "recommendations": [
+        "Constituer une fiche de synthèse des erreurs fréquentes observées dans les devoirs.",
+        "Planifier une correction collective du Devoir N°4.",
+        "Archiver les quatre sujets de devoirs pour créer une base personnelle d'évaluations."
+      ],
+      "conclusion": "La dernière journée confirme l'importance de maîtriser les outils numériques institutionnels et de gérer une évaluation sommative de bout en bout.",
+      "tags": [
+        "Devoir N°4",
+        "évaluation finale",
+        "Python",
+        "Massar",
+        "notes",
+        "fin de stage"
+      ],
+      "sourcePages": [
+        44,
+        45,
+        46,
+        47
+      ]
+    }
+  ],
+  "globalProgression": [
+    {
+      "step": 1,
+      "label": "Découverte",
+      "description": "Découverte du lycée, de la salle informatique et des documents professionnels."
+    },
+    {
+      "step": 2,
+      "label": "Algorithmique",
+      "description": "Introduction de l'algorithme, des structures séquentielles et alternatives."
+    },
+    {
+      "step": 3,
+      "label": "Évaluation",
+      "description": "Participation à la surveillance, à la correction et à l'analyse des copies."
+    },
+    {
+      "step": 4,
+      "label": "Python",
+      "description": "Passage progressif de l'algorithme au code Python."
+    },
+    {
+      "step": 5,
+      "label": "TP et accompagnement",
+      "description": "Aide individualisée, maintenance des postes et pratique guidée."
+    },
+    {
+      "step": 6,
+      "label": "Autonomie",
+      "description": "Observation critique et participation active dans les séances animées par les stagiaires."
+    },
+    {
+      "step": 7,
+      "label": "Massar",
+      "description": "Orientation scolaire et saisie des notes via les outils institutionnels."
+    },
+    {
+      "step": 8,
+      "label": "Bilan final",
+      "description": "Évaluation finale et synthèse des compétences professionnelles développées."
+    }
+  ],
+  "uiFilters": [
+    {
+      "key": "all",
+      "label": "Toutes les journées"
+    },
+    {
+      "key": "Algorithmique",
+      "label": "Algorithmique"
+    },
+    {
+      "key": "Python",
+      "label": "Python"
+    },
+    {
+      "key": "Évaluation",
+      "label": "Évaluation"
+    },
+    {
+      "key": "Massar",
+      "label": "Massar / Orientation"
+    }
+  ]
+}

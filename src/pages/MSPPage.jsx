@@ -1,5 +1,7 @@
-import { FiBookOpen, FiCalendar, FiFileText, FiMapPin, FiVideo } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
+import { FiArrowRight, FiBookOpen, FiCalendar, FiFileText, FiMapPin } from 'react-icons/fi';
 import SectionHeader from '../components/SectionHeader';
+import { driveLinks } from '../data/portfolioData';
 
 const iconByLabel = {
   Date: FiCalendar,
@@ -8,9 +10,9 @@ const iconByLabel = {
 };
 
 const resources = [
-  { label: 'Rapport de stage MSP', icon: FiFileText, href: '#' },
-  { label: 'Fiche pédagogique', icon: FiBookOpen, href: '#' },
-  { label: 'Séquence Python', icon: FiBookOpen, href: '#' },
+  { label: 'Rapport de stage MSP', icon: FiFileText, href: driveLinks.mspFolder },
+  { label: 'Fiche pédagogique', icon: FiBookOpen, href: driveLinks.mspFolder },
+  { label: 'Détail du MSP', icon: FiFileText, to: '/msp/rapport' },
 ];
 
 const getResourceLink = (resource) => {
@@ -18,8 +20,7 @@ const getResourceLink = (resource) => {
     return resource.href;
   }
 
-  const query = `MSP ${resource.label} CRMEF`;
-  return `https://drive.google.com/drive/search?q=${encodeURIComponent(query)}`;
+  return driveLinks.mspFolder;
 };
 
 export default function MSPPage() {
@@ -91,19 +92,48 @@ export default function MSPPage() {
           <div className="mt-5 grid gap-3 md:grid-cols-3">
             {resources.map((resource) => {
               const ResourceIcon = resource.icon;
+              const isFeaturedResource = Boolean(resource.to);
+              const linkClassName = `group flex items-center justify-between gap-3 rounded-[14px] border px-4 py-3 text-sm font-medium transition-all duration-300 hover:-translate-y-1 hover:border-primary-light hover:text-primary-light hover:shadow-md ${
+                isFeaturedResource
+                  ? 'border-primary-light bg-primary-light/5 text-primary-dark shadow-md shadow-primary-light/10'
+                  : 'border-border bg-white text-text'
+              }`;
+              const content = (
+                <>
+                  <span className="flex min-w-0 items-center gap-2">
+                    <ResourceIcon size={16} />
+                    <span className="min-w-0">{resource.label}</span>
+                  </span>
+                  <FiArrowRight
+                    className={`shrink-0 transition-transform group-hover:translate-x-1 ${
+                      isFeaturedResource ? 'text-primary-light' : 'text-text-light'
+                    }`}
+                    size={18}
+                  />
+                </>
+              );
+
+              if (resource.to) {
+                return (
+                  <Link
+                    key={resource.label}
+                    to={resource.to}
+                    className={linkClassName}
+                  >
+                    {content}
+                  </Link>
+                );
+              }
+
               return (
                 <a
                   key={resource.label}
                   href={getResourceLink(resource)}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-between gap-3 rounded-[14px] border border-border bg-white px-4 py-3 text-sm font-medium text-text transition hover:border-primary-light hover:text-primary-light"
+                  className={linkClassName}
                 >
-                  <span className="flex items-center gap-2">
-                    <ResourceIcon size={16} />
-                    {resource.label}
-                  </span>
-                  <span aria-hidden="true">→</span>
+                  {content}
                 </a>
               );
             })}

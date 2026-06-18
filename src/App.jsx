@@ -2,6 +2,8 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import MSPPage from './pages/MSPPage';
+import MSPReportPage from './pages/MSPReportPage';
+import MSPDayDetailPage from './pages/MSPDayDetailPage';
 import CRMEFPage from './pages/CRMEFPage';
 import ModuleDetailPage from './pages/ModuleDetailPage';
 
@@ -12,6 +14,8 @@ export default function App() {
         <Route index element={<HomePage />} />
         <Route path="pr-abouljidmohamed" element={<HomePage />} />
         <Route path="msp" element={<MSPPage />} />
+        <Route path="msp/rapport" element={<MSPReportPage />} />
+        <Route path="msp/rapport/journees/:dayId" element={<MSPDayDetailPage />} />
         <Route path="apropos" element={<Navigate to="/#apropos" replace />} />
         <Route path="contact" element={<Navigate to="/#contact" replace />} />
         <Route path="crmef" element={<CRMEFPage />} />

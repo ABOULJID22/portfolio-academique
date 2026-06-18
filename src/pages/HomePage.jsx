@@ -91,7 +91,7 @@ const fadeInUpVariants = {
 const resources = [
   { label: 'Rapport de stage MSP', icon: FiFileText, href: driveLinks.mspFolder },
   { label: 'Fiche pédagogique', icon: FiBookOpen, href: driveLinks.mspFolder },
-  { label: 'Séquence Python', icon: FiBookOpen, href: driveLinks.mspFolder },
+  { label: 'Détail du MSP', icon: FiFileText, to: '/msp/rapport' },
 ];
 
 const pedagogicalDocuments = [
@@ -1146,24 +1146,58 @@ export default function HomePage() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" variants={containerVariants}>
             {resources.map((resource) => {
               const ResourceIcon = resource.icon;
+              const isFeaturedResource = Boolean(resource.to);
+              const cardClassName = `group relative flex items-center justify-between rounded-2xl border p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary-light hover:shadow-lg hover:shadow-primary-light/10 ${
+                isFeaturedResource
+                  ? 'border-primary-light bg-primary-light/5 shadow-lg shadow-primary-light/10'
+                  : 'border-border bg-white'
+              }`;
+              const content = (
+                <>
+                  <div className="flex min-w-0 items-center gap-4">
+                    <div
+                      className={`flex h-10 w-10 items-center justify-center rounded-xl transition-colors group-hover:bg-primary-light group-hover:text-white ${
+                        isFeaturedResource ? 'bg-primary-light text-white shadow-sm' : 'bg-bg text-primary-light'
+                      }`}
+                    >
+                      <ResourceIcon size={20} />
+                    </div>
+                    <span
+                      className={`min-w-0 text-sm font-semibold transition-colors group-hover:text-primary-dark ${
+                        isFeaturedResource ? 'text-primary-dark' : 'text-dark'
+                      }`}
+                    >
+                      {resource.label}
+                    </span>
+                  </div>
+                  <FiArrowRight
+                    className={`transition-all group-hover:translate-x-1 group-hover:text-primary-light ${
+                      isFeaturedResource ? 'text-primary-light' : 'text-text-light'
+                    }`}
+                  />
+                </>
+              );
+
+              if (resource.to) {
+                return (
+                  <motion.div key={resource.label} variants={itemVariants}>
+                    <Link to={resource.to} className={cardClassName}>
+                      {content}
+                    </Link>
+                  </motion.div>
+                );
+              }
+
               return (
                 <motion.a
                   key={resource.label}
                   href={getResourceLink(resource)}
                   target="_blank"
                   rel="noreferrer"
-                  className="group relative flex items-center justify-between rounded-2xl border border-border bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-primary-light hover:shadow-lg hover:shadow-primary-light/10"
+                  className={cardClassName}
                   variants={itemVariants}
                 >
-                  <div className="flex min-w-0 items-center gap-4">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-bg text-primary-light transition-colors group-hover:bg-primary-light group-hover:text-white">
-                      <ResourceIcon size={20} />
-                    </div>
-                    <span className="min-w-0 text-sm font-semibold text-dark transition-colors group-hover:text-primary-dark">
-                      {resource.label}
-                    </span>
-                  </div>
-                  <FiArrowRight className="text-text-light transition-all group-hover:translate-x-1 group-hover:text-primary-light" />
+                  {content}
                 </motion.a>
               );
             })}

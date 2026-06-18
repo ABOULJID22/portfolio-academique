@@ -19,13 +19,16 @@ import {
   VieScolaireIcon,
 } from '../components/ModuleSvgIcons';
 
+const driveFolderUrl = (id) => `https://drive.google.com/drive/folders/${id}?usp=drive_link`;
+const driveFileUrl = (id) => `https://drive.google.com/file/d/${id}/view?usp=drive_link`;
+
 export const driveLinks = {
-  moduleSummaries: 'https://drive.google.com/drive/folders/1uiaqf_pK3IkbwCaweNQpx_oPqcrXveUt?usp=sharing',
-  moduleSyllabi: 'https://drive.google.com/drive/folders/1jdM3WGT1M0XDEwCMsb-dGOftkU-OrSxC?usp=sharing',
-  pedagogicalResources: 'https://drive.google.com/drive/folders/1fQvtHRBQEGplip2voewgGvxuhjcRrgHW?usp=sharing',
-  administrativeDocuments: 'https://drive.google.com/drive/folders/1f7yhgND0Osjwlrfe3mCeYs0fZaN9bZXg?usp=drive_link',
-  semester1Courses: 'https://drive.google.com/drive/folders/1Pc8ciVQhKutxULsT-hdte8A24zFgIc5U?usp=sharing',
-  semester2Courses: 'https://drive.google.com/drive/folders/1hYyBGaGnTOxNzCvqC0Decm6BDUXxbGYk?usp=sharing',
+  moduleSummaries: driveFolderUrl('1uiaqf_pK3IkbwCaweNQpx_oPqcrXveUt'),
+  moduleSyllabi: driveFolderUrl('1jdM3WGT1M0XDEwCMsb-dGOftkU-OrSxC'),
+  pedagogicalResources: driveFolderUrl('1fQvtHRBQEGplip2voewgGvxuhjcRrgHW'),
+  administrativeDocuments: driveFolderUrl('1f7yhgND0Osjwlrfe3mCeYs0fZaN9bZXg'),
+  semester1Courses: driveFolderUrl('1QajqriNrL-MOccL0kK6-rbsFAeyMDGJl'),
+  semester2Courses: driveFolderUrl('14CC_QLxFRRlQ3luy5IkiCg5DusfYxUpY'),
   ppeFolder: 'https://drive.google.com/drive/folders/11WFsJB-PYrbyUS97c3UFDWzBsIdcgbSJ?usp=sharing',
   ppeVideo: 'https://canva.link/22ikgnlfoevqjuu',
   mspFolder: 'https://drive.google.com/drive/folders/1O8TRcPcW9K6VoYxwkQxp72mT5ISdXzjp?usp=sharing',
@@ -33,12 +36,114 @@ export const driveLinks = {
 
 const DRIVE_FOLDER_URL = driveLinks.moduleSummaries;
 
-const getModuleResourceHref = (semester, label) => {
+const moduleResourceLinks = {
+  's1-didactique-informatique': {
+    summary: driveFileUrl('1uZdEWDPELvC9qLrAJVaTW4nwrUu6VE8q'),
+    course: driveFolderUrl('17fy3m8IJr47pViStZ-bYoebTchY3Aish'),
+    syllabus: driveFileUrl('1_fgu7zqpU38KkSZ5Jqeq2u0esUTrHxBF'),
+  },
+  's1-sciences-education': {
+    summary: driveFileUrl('100OHNWllwqgZ4NYHnn7q6jXacTUk2tNp'),
+    course: driveFolderUrl('1T-_AjakUMyYHoSVP_5pJLJj9golRrGk6'),
+    syllabus: driveFileUrl('1r4RwZiWzDnBVuYimLD48U12nRS-stnmT'),
+  },
+  's1-planification': {
+    summary: driveFileUrl('19ezia8cakNT0nFcdb7c9JfXVg5LeqByN'),
+    course: driveFolderUrl('1VzKLCcfESFBWVKIOWzM0SkzCHf9D_vq0'),
+    syllabus: driveFileUrl('1BmrAsjC0xXtjFVTfGcojtU45bBTktwOa'),
+  },
+  's1-gestion': {
+    summary: driveFileUrl('1qiXIs13OHuObHGPKfFkxHATeTgeu39rs'),
+    course: driveFolderUrl('12cEKVziZGFDfMnZa2dSaGvtidlI-VoeG'),
+    syllabus: driveFileUrl('1E430v7iJcI-TovmKRFna8nJzYEqR1zIU'),
+  },
+  's1-algorithmique-programmation': {
+    summary: driveFileUrl('1FDnri7oFfzG2T5zvM4YubYqO7-epnQqJ'),
+    course: driveFolderUrl('1B0Gl9QsUOkiSYNjwH1u1H0ynyiDZl2fD'),
+    syllabus: driveFileUrl('1WbIO_rvVyR4EpQCubkStkvgf4y7c4FfQ'),
+  },
+  's1-architecture-ordinateurs': {
+    summary: driveFileUrl('1eVX2Q649RFXFSaWQMhNsJrsZzP4JA55Q'),
+    course: driveFolderUrl('1aqMUlDOxhCGmjrVk-cKBDDUM2Lvq1ciW'),
+    syllabus: driveFileUrl('17IE-1z4Z1rsYRjBoqrVyHBLpQXzuaycd'),
+  },
+  's1-methodologie-recherche': {
+    summary: driveFileUrl('1tqLcVumvxCyrRAY-na5TRuE0SzMvcQhu'),
+    course: driveFileUrl('1FAEggib5M6WRudNzGIZMlbmb79MLd0kH'),
+    syllabus: driveFileUrl('1Ri0c_H5bU8k41a7ZZTRX8aEpF0AAnrom'),
+  },
+  's1-tice': {
+    summary: driveFileUrl('1NTdHu_xGvFO_8uFnGgHQu4UoAcQjhay9'),
+    course: driveFolderUrl('1_LOrfjqX0etKwMLna-X44_dXgD5i4OJG'),
+    syllabus: driveFileUrl('1pEPO4eySjOJ5oNwm-EsladbQNyzMSxn2'),
+  },
+  's2-gestion-2': {
+    summary: driveFileUrl('17lF1tutiHV8Ntty3mBHyY36xMmWVecsV'),
+    course: driveFolderUrl('1a_IxEuGYDOafzGjC8ycb1FjHIbVuDpwo'),
+    syllabus: driveFileUrl('1wJ_3pj5l6eAFdlNy4fQ0bKpj3iDDLpSd'),
+  },
+  's2-evaluation': {
+    summary: driveFileUrl('12k_vICtfbGakzcA48Ere79glC1UHoOJT'),
+    course: driveFolderUrl('10WHOj-Bqjvtk9-k2Yy0WtsF4grDKYT9u'),
+    syllabus: driveFileUrl('1oih2O-Iq59liV5zS6_aWZU0fuz6Kx1Yw'),
+  },
+  's2-production-didactique': {
+    summary: driveFileUrl('1a9yfdXjZu_eW2W7DRQ10ZCIargShmXYI'),
+    course: driveFolderUrl('1rkTDYcEWmelEG4M_Kb0dHV2vUcqIbeC8'),
+    syllabus: driveFileUrl('1MacoUUdiRJNh8zwh1zTd0Qs_qFPsuj4M'),
+  },
+  's2-analyse-pratiques-professionnelles': {
+    summary: driveFileUrl('1Lt9CwbvBW1LSig57FLuozuJI4uTj5i36'),
+    course: driveFolderUrl('16quVpo0wmUK2aJNgiFRZA0a38yZdIhQZ'),
+    syllabus: driveFileUrl('1g93_nd1FQVxM9pvOEI-CW5JXQjdBGReb'),
+  },
+  's2-technologies-developpement-web': {
+    summary: driveFileUrl('17z5yjbOXFGYJaJOHAn3q5936mrks5G2c'),
+    course: driveFolderUrl('1LTxVdi9VJxMjx8zk02blMnDkTGfD85CQ'),
+    syllabus: driveFileUrl('1fr1kXPQWFFzjMtW19s000WgtkaUnVepa'),
+  },
+  's2-reseaux-internet': {
+    summary: driveFolderUrl('1AJYOMQvw762_7g5hiUGX-xcmfVhZ_fRW'),
+    course: driveFolderUrl('1gzhbdq4cYa4jFwv3WjvSKzEZJiWoH92i'),
+    syllabus: driveFileUrl('1IgUnNIR8D1tDvwOl7aT0OphZEsfVBWfj'),
+  },
+  's2-ethiques': {
+    summary: driveFileUrl('1S4UFl5EhOwaKtRr7OZbRV8wnvjsLGU-z'),
+    course: driveFolderUrl('1decKA3gbRilVWnLEWeqXemGMRk_yOvRQ'),
+    syllabus: driveFileUrl('1zzswDO4Ff2BxdZ-0Isz_wvecgT5y8m4F'),
+  },
+  's2-vie-scolaire': {
+    summary: driveFileUrl('1g9K69Rx2GndVSj3Y9PumcnylVjleAeZj'),
+    course: driveFolderUrl('1h3qop6BH9Jao4ERRGCxNdumheryou7xE'),
+    syllabus: driveFileUrl('1Kz5bbi1vtmsVapL-7olA7PG8G0aZYPWh'),
+  },
+};
+
+const getResourceType = (label) => {
   if (label.includes('Cours')) {
-    return semester === 'Semestre 1' ? driveLinks.semester1Courses : driveLinks.semester2Courses;
+    return 'course';
   }
 
   if (label.includes('Syllabus')) {
+    return 'syllabus';
+  }
+
+  return 'summary';
+};
+
+const getModuleResourceHref = (module, label) => {
+  const resourceType = getResourceType(label);
+  const moduleLinks = moduleResourceLinks[module.slug];
+
+  if (moduleLinks?.[resourceType]) {
+    return moduleLinks[resourceType];
+  }
+
+  if (resourceType === 'course') {
+    return module.semester === 'Semestre 1' ? driveLinks.semester1Courses : driveLinks.semester2Courses;
+  }
+
+  if (resourceType === 'syllabus') {
     return driveLinks.moduleSyllabi;
   }
 
@@ -423,7 +528,7 @@ export const modulePages = rawModulePages.map((module) => ({
   ...module,
   resources: module.resources.map((resource) => ({
     ...resource,
-    href: getModuleResourceHref(module.semester, resource.label),
+    href: getModuleResourceHref(module, resource.label),
   })),
 }));
 

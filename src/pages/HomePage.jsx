@@ -131,7 +131,7 @@ const semesterTabs = [
   { id: 'sem2', label: 'Semestre 2' },
 ];
 
-const ppePillars = [
+/* const ppePillars = [
   {
     label: 'Profil apprenant',
     value: 'Identifier les intérêts, compétences et ambitions.',
@@ -147,9 +147,9 @@ const ppePillars = [
     value: 'Proposer domaines numériques, métiers et formations.',
     icon: FiCode,
   },
-];
+]; */
 
-const ppeSlides = [
+/* const ppeSlides = [
   {
     badge: 'Vision du projet',
     title: "L'informatique au coeur des choix de demain",
@@ -212,7 +212,7 @@ const ppeResources = [
     href: driveLinks.ppeVideo,
   },
 ];
-
+ */
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState('sem1');
   const [carouselIndex, setCarouselIndex] = useState(0);
@@ -1205,8 +1205,8 @@ export default function HomePage() {
         </motion.div>
       </motion.section>
 
-{/* PPE */}
-      <motion.section
+ {/* PPE */}
+   {/*  <motion.section
         id="ppe"
         className="section-shell overflow-hidden"
         initial="hidden"
@@ -1380,7 +1380,7 @@ export default function HomePage() {
           </motion.div>
         </div>
       </motion.section>
-
+ */}
 {/* contact */}     
 
       <motion.section
